@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text to speech AI</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./font/font-awesome6pro/css/all.css">
+  </head>
+  <body>
+    <div id="__next">
+      <header>
+        <div class="absolute left- top-[0] w-full h-auto z-10" >
+          <div class="max-w-[1630px] ml-auto mr-auto pl-[15px] pr-[15px]">
+            <div class="menu-wrap">
+              <nav class="flex items-center flex-wrap justify-start">
+                <div class="logo">
+                  <a href="/"><img src="./image/logo.png" alt="Logo"></a>
+                </div>
+                <div class="main-menu flex-grow flex">
+                  <ul class="flex flex-row flex-wrap p-0 mx-[auto] my-[0]">
+                    <li><a class="menu-link active" href="/">Home</a></li>
+                    <li><a class="menu-link" href="#">About Us</a></li>
+                    <li><a class="menu-link" href="#">Help Center</a></li>
+                    <li><a class="menu-link" href="#">News</a></li>
+                    <li><a class="menu-link" href="#">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="header-action">
+                  <ul class="flex items-center ml-10">
+                    <li class="ml-0 header-lang relative">
+                      <div class="dropdown relative">
+                          <button class="border-[none] bg-transparent p-0 font-normal text-[14px] uppercase flex items-center gap-[5px] text-white">
+                              <img src="./image/lang-en.jpg" alt="en" class="rounded-[10px]">
+                              EN
+                              <i class="fa-solid fa-angle-down"></i>
+                          </button>
+                          <div class="dropdown-menu hidden absolute right-0 w-40 bg-white border border-gray-200 p-2 mt-[0px] rounded-[5px]">
+                              <button class="border-[none] bg-transparent p-0 font-normal text-[14px] uppercase flex items-center gap-[5px]">
+                                  <img src="./image/russia.jpg" alt="vi" class="rounded-[10px]">
+                                  VN
+                              </button>
+                          </div>
+                      </div>
+                  </li>
+                    <li class="ml-[40px] relative">
+                      <a href="#" class="font-outfit bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#000] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:all_.5s_ease_0s] align-middle whitespace-nowrap relative">
+                        SIGN UP 
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main-content bg-[#151515]">
+          <div class="bg-[url(./image/noise_bg.png)] bg-cover bg-[50%] w-full h-full left-[0] top-[0]"></div>
+          <div class="bg-[url(./image/main_shade.png)] bg-cover bg-[50%] w-full h-full left-[0] top-[0]"></div>
+
+          <section class="banner-area relative pt-[200px] px-[0] pb-[110px] z-[1]">
+            <div class="absolute left-[0] top-[0] w-full h-full bg-cover bg-[50%] opacity-[.3] bg-[url(./image/h3_banner_shape.png)] z-[-1]"></div>
+            <div class="custom-container w-full mr-auto ml-auto">
+                <div class=" justify-center flex">
+                  <div class="text-content text-center font-PlusJakarta w-[75%]">
+                    <h2 class="title font-semibold text-[74px] tracking-[-.02em] mb-[20px]">Technology Transform Your <span class="font-playfair italic font-medium">Words into Voice</span></h2>
+                    <p class="w-[720px] text-[#ababab] font-outfit mx-auto my-[0] text-[18px]">Artificial intelligence makes it fast easy to create content for your blog, social media, website, and more! Rated 5/5 stars in 3,000+ reviews.</p>
+                  </div>
+                </div>
+            </div>
+          </section>
+
+          <section class="speech-area relative pt-[0] px-[0] pb-[100px] z-[1] ">
+            <div class="custom-container  mr-auto ml-auto pl-[15px] pr-[15px]">
+              <div class="flex justify-center gap-[30px]">
+                <div class="speech-item w-full bg-[#222325] rounded-[20px] px-[20px] py-[30px] mb-[30px]">
+                  <form action="">
+                    <div class="engine-form flex gap-[20px]">
+                      <div class="lang-ordering mb-[20px] w-full">
+                        <select name="" id="select_lang" class="w-full bg-[#222325] font-outfit outline-none text-[#f0f0f0] border-[1px] border-[solid] border-[#393a3d] rounded-[5px] text-[16px] px-[20px] py-[10px]">
+                          <option value="0">English (Canada)</option>
+                          <option value="1">Viet Nam (VN)</option>
+                        </select>
+                      </div>
+                      <div class="voice-ordering mb-[20px] w-full">
+                        <select name="" id="select_voice"  class="w-full bg-[#222325] font-outfit outline-none text-[#f0f0f0] border-[1px] border-[solid] border-[#393a3d] rounded-[5px] text-[16px] px-[20px] py-[10px]">
+                          <option value="0">Amber (HD)</option>
+                          <option value="0">Brandon (HD)</option>
+                          <option value="0">Tony (HD)</option>
+                          <option value="0">Michael (HD)</option>
+                          <option value="0">Sara (HD)</option>
+                          <option value="0">Prabhat (HD)</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-grp border-[1px] border-[solid] border-[#393a3d] rounded-[5px] pt-[10px] px-[10px] pb-[20px] mb-[20px]">
+                      <textarea placeholder="Enter to text" class="w-full text-white font-outfit outline-none border-[none] block bg-[rgba(57,58,61,.3)] rounded-[5px] px-[20px] py-[10px] min-h-[160px] max-h-[160px] mb-[15px]"></textarea>
+                      <div class="flex items-start justify-between text-[13px] leading-[1.2] text-[#ababab]">
+                        <span>Free use of Voicer Studio is limited to 50 characters. For more <br>
+                          usage and premium voices, you can purchase packages.</span>
+                          <span>0 characters</span>
+                      </div>
+                    </div>
+                    <button class="hover:bg-[#fdcf6d] [transition:all_.5s] speech-btn font-outfit font-semibold text-[14px] tracking-[.05em] uppercase text-[#151515] border-[none] w-full px-[20px] py-[13px] rounded-[5px] bg-[#00c39a] flex items-center justify-center h-[50px]">
+                      <span class="w-[5px] h-[9px] inline-block bg-[#151515] mr-[3px]"></span>
+                      <span class="w-[5px] h-[15px] inline-block bg-[#151515] mr-[3px]"></span>
+                      <span class="w-[5px] h-[9px] inline-block bg-[#151515] mr-[10px]"></span>
+                      text to speech
+                    </button>
+                  </form>
+                </div>
+                <div class="speech-item w-full bg-[#222325] rounded-[20px] px-[20px] py-[30px] mb-[30px]">
+                  <div class="flex items-center justify-center border-[1px] border-[solid] border-[#393a3d] rounded-[5px] px-[20px] py-[14px] mb-[20px] cursor-pointer [transition:.3s_linear] relative gap-[10px]">
+                    <input type="file" class="absolute left-0 top-0 w-full opacity-0 cursor-pointer text-[14px] px-[20px] py-[10px]">
+                    <h6 class="text-[16px] text-[#f0f0f0] font-medium mb-0 font-outfit ">
+                      <i class="fa-regular fa-files mr-[10px]"></i> Browser
+                    </h6>
+                    <span class="font-normal text-[12px] bg-[#393a3d] rounded-[3px] block leading-none text-[#f0f0f0] px-[10px] py-[4px] ml-[10px]">.mp3</span>
+                    <span class="font-normal ml-[0] text-[12px] bg-[#393a3d] rounded-[3px] block leading-none text-[#f0f0f0] px-[10px] py-[4px]">.wav</span>
+                  </div>
+                  <form action="">
+                    <div class="flex mb-[20px] gap-[20px]">
+                      <input type="text" placeholder="Give a name to your work" class="font-medium font-outfit outline-none w-full text-[#f0f0f0] border-[1px] border-[solid] border-[#393a3d] rounded-[5px] bg-transparent text-[16px] px-[20px] py-[10px] h-[50px]">
+                      <select name="" id="punctuation-select2" class="!bg-[#222325] mb-[20px] text-[#f0f0f0] border-[1px] border-[solid] border-[#393a3d] rounded-[5px] text-[16px] px-[20px] py-[10px] h-[50px] w-full outline-none">
+                          <option value="0">Punctuation: Auto</option>
+                          <option value="1">Punctuation: Off</option>
+                          <option value="2">Punctuation: On</option>
+                      </select>
+                    </div>
+                    <div class="flex gap-[20px]">
+                      <select name="" id="punctuation-select2" class="!bg-[#222325] mb-[20px] text-[#f0f0f0] border-[1px] border-[solid] border-[#393a3d] rounded-[5px] text-[16px] px-[20px] py-[10px] h-[50px] w-full outline-none">
+                        <option value="0">Profanity Filter: On</option>
+                        <option value="1">Profanity Filter: Off</option>
+                    </select>
+                      <select name="" id="punctuation-select2" class="!bg-[#222325] mb-[20px] text-[#f0f0f0] border-[1px] border-[solid] border-[#393a3d] rounded-[5px] text-[16px] px-[20px] py-[10px] h-[50px] w-full outline-none">
+                          <option value="0">English (American)</option>
+                          <option value="1">Viet Nam (VN)</option>
+                      </select>
+                    </div>
+                    <div class="flex items-start justify-between text-[13px] leading-[1.2] text-[#ababab] mb-[55px]">
+                      <span>Voicer Transcribe free use is limited to 5 minutes. You can <br>
+                        purchase packages for more use and to transcribe longer files.</span>
+                        <span>00 Minutes</span>
+                    </div>
+                    <button class="hover:bg-[#fdcf6d] [transition:all_.5s] speech-btn font-outfit font-semibold text-[14px] tracking-[.05em] uppercase text-[#151515] border-[none] w-full px-[20px] py-[13px] rounded-[5px] bg-[#00c39a] flex items-center justify-center h-[50px]">
+                      <span class="w-[5px] h-[9px] inline-block bg-[#151515] mr-[3px]"></span>
+                      <span class="w-[5px] h-[15px] inline-block bg-[#151515] mr-[3px]"></span>
+                      <span class="w-[5px] h-[9px] inline-block bg-[#151515] mr-[10px]"></span>
+                      Convert audio to text
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="speech-shape-wrap">
+              <div class="bg-[url(./image/speech_shape01.png)] absolute bg-cover bg-[50%] w-full left-[0] h-[282px] top-0 z-[-1]"></div>
+              <div class="bg-[url(./image/speech_shape02.png)] absolute bg-cover bg-[50%] w-full left-[0] h-[591px] bottom-[-200px] z-[-1]"></div>
+            </div>
+          </section>
+
+          <section class="brand-aera-three relative pt-[0] px-[0]  z-[1] ">
+            
+          </section>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

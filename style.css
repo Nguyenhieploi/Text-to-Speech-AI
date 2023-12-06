@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-container{
+    max-width: 1320px;
+}
+.menu-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 40px 26px;
+    display: block;
+    position: relative;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    color: white;
+    transition: color 0.3s ease;
+  }
+.active{
+    color: #00c39a;
+}
+.menu-link:hover {
+    color: #00c39a;
+  }
+.gradient-btn::after{
+    content: "\f061";
+    margin-left: 20px;
+    transform: rotate(-45deg);
+    transition: all .3s ease 0s;
+    font-weight: 400;
+    font-family: Font Awesome\ 6 Pro;
+    display: inline-block;
+}
+.gradient-btn:hover::after {
+    transform: rotate(0deg);
+}
+.gradient-btn:hover{
+    background: linear-gradient(89.69deg, #fdcf6d 36.5%,#00c39a 98.77%);
+}
+
+/* Hiển thị dropdown-menu khi hover vào .header-lang */
+.header-lang:hover .dropdown-menu {
+    display: block;
+}
+
+/* Thêm hiệu ứng transition để mượt mà */
+.dropdown-menu {
+    transition: all 0.3s ease;
+}
+.title{
+    background: linear-gradient(179.14deg,#f0f0f0 7.77%,#171717 120.01%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
