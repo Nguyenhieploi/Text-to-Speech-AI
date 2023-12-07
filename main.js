@@ -1,3 +1,4 @@
+window.scrollTo({top: 0, behavior: 'smooth'});
 document.addEventListener('DOMContentLoaded', () => {
     const billingMonthly = document.getElementById('billing-monthly');
     const billingYearly = document.getElementById('billing-yearly');
@@ -19,21 +20,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function scrollSticky() {
-    // Lấy đối tượng header
-    var header = document.getElementById("sticky-header");
-    // Thêm sự kiện cuộn
-    window.onscroll = function () {
-      // Kiểm tra vị trí cuộn so với đối tượng header
-      var scrolled = window.scrollY > 0;
-      
-      // Áp dụng lớp scrolled tùy thuộc vào việc cuộn hay không
-      header.classList.toggle("scrolled", scrolled);
-     
-    };
-  }
-  
-  // Gọi hàm scrollSticky để thiết lập sự kiện cuộn khi trang được tải
-  scrollSticky();
+//
+document.addEventListener("DOMContentLoaded", function () {
+    // Chức năng cho sticky header và nút scroll to top
+    function handleScrollActions() {
+        var header = document.getElementById("sticky-header");
+        var sticky = header.offsetTop;
 
+        var scrollToTopButton = document.getElementById('scrollToTop');
 
+        function handleStickyHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+        function toggleScrollToTopButton() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopButton.style.right = '5px';
+            } else {
+                scrollToTopButton.style.right = '-35px';
+            }
+        }
+
+        // Gắn hàm vào sự kiện cuộn (scroll)
+        window.onscroll = function () {
+            handleStickyHeader();
+            toggleScrollToTopButton();
+        };
+
+       
+    }
+
+    // Gọi hàm khi trang được tải
+    handleScrollActions();
+});

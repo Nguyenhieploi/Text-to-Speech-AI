@@ -13,11 +13,9 @@
     position: fixed;
     z-index: 999;
   }
-  
-  #sticky-header.scrolled {
-    background-color: #151515; /* Màu nền xanh lá nhạt khi cuộn */
-   
-  }
+.sticky{
+    background: #151515;
+}
 .menu-link {
     text-decoration: none;
     font-size: 16px;
@@ -275,12 +273,5 @@
 .btn-for-free:hover .arrow{
     transform: rotate(0deg);
 }
-#scrollToTop.hidden {
-    opacity: 0;
-   
-  }
-  
-  #scrollToTop.visible {
-    opacity: 1;
-   
-  }
+
+
