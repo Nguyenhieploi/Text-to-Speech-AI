@@ -11,7 +11,7 @@
   <body>
     <div id="__next">
       <header>
-        <div class="absolute left- top-[0] w-full h-auto z-10" >
+        <div id="sticky-header" class="absolute left- top-[0] w-full h-auto z-10" >
           <div class="max-w-[1630px] ml-auto mr-auto pl-[15px] pr-[15px]">
             <div class="menu-wrap">
               <nav class="flex items-center flex-wrap justify-start">
@@ -45,7 +45,7 @@
                       </div>
                   </li>
                     <li class="ml-[40px] relative">
-                      <a href="#" class="font-outfit bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#000] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:all_.5s_ease_0s] align-middle whitespace-nowrap relative">
+                      <a href="#" class="font-outfit bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#000] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:.3s] align-middle whitespace-nowrap relative">
                         SIGN UP 
                       </a>
                     </li>
@@ -166,7 +166,7 @@
                 TRUSTED BY 10,000+ MARKETING TEAMS
               </h6>
               <div class="slick-list flex overflow-hidden">
-                <swiper-container class="mySwiper w-full h-full" space-between="30" slides-per-view="7" loop="true" autoplay="true" >
+                <swiper-container class="mySwiper w-full h-full"  slides-per-view="7" loop="true" autoplay="true"  >
                   <swiper-slide>
                     <div class="brand-item-three mx-[25px] my-0 w-[232px] h-[232px] flex items-center justify-center rounded-[50%] cursor-pointer [transition:.3s_linear] opacity-[.5]  relative">
                       <img src="./image/brand_img01.png" alt="barand_02">
@@ -226,8 +226,8 @@
               <div class="flex justify-center gap-[10px] -mx-[5px] my-[0] flex-wrap">
                 <div class=" service-item [box-shadow:0_19px_10px_rgba(0,0,0,.06)] rounded-[20px] bg-[#222325] pt-[50px] px-[40px] pb-[45px] relative mb-[10px] z-[1]">
                   <div class="services-item-overlay"></div>
-                  <div class="min-h-[50px] mb-[30px]">
-                    <img src="./image/services_icon01.svg" alt="service1">
+                  <div class="min-h-[50px] mb-[30px]  service-icon">
+                    <img src="./image/icon services/services_icon01.svg" alt="service1">
                   </div>
                   <div>
                     <h2 class="font-semibold text-[20px] mb-[25px] text-[#f0f0f0] font-PlusJakarta">
@@ -238,8 +238,8 @@
                 </div>
                 <div class=" service-item [box-shadow:0_19px_10px_rgba(0,0,0,.06)] rounded-[20px] bg-[#222325] pt-[50px] px-[40px] pb-[45px] relative mb-[10px] z-[1]">
                   <div class="services-item-overlay"></div>
-                  <div class="min-h-[50px] mb-[30px]">
-                    <img src="./image/services_icon01.svg" alt="service1">
+                  <div class="min-h-[50px] mb-[30px] service-icon">
+                    <img src="./image/icon services/services_icon02.svg" alt="service1">
                   </div>
                   <div>
                     <h2 class="font-semibold text-[20px] mb-[25px] text-[#f0f0f0] font-PlusJakarta">
@@ -250,8 +250,8 @@
                 </div>
                 <div class=" service-item [box-shadow:0_19px_10px_rgba(0,0,0,.06)] rounded-[20px] bg-[#222325] pt-[50px] px-[40px] pb-[45px] relative mb-[10px] z-[1]">
                   <div class="services-item-overlay"></div>
-                  <div class="min-h-[50px] mb-[30px]">
-                    <img src="./image/services_icon01.svg" alt="service1">
+                  <div class="min-h-[50px] mb-[30px] service-icon">
+                    <img src="./image/icon services/services_icon03.svg" alt="service1">
                   </div>
                   <div>
                     <h2 class="font-semibold text-[20px] mb-[25px] text-[#f0f0f0] font-PlusJakarta">
@@ -262,8 +262,8 @@
                 </div>
                 <div class=" service-item [box-shadow:0_19px_10px_rgba(0,0,0,.06)] rounded-[20px] bg-[#222325] pt-[50px] px-[40px] pb-[45px] relative mb-[10px] z-[1]">
                   <div class="services-item-overlay"></div>
-                  <div class="min-h-[50px] mb-[30px]">
-                    <img src="./image/services_icon01.svg" alt="service1">
+                  <div class="min-h-[50px] mb-[30px] service-icon">
+                    <img src="./image/icon services/services_icon04.svg" alt="service1">
                   </div>
                   <div>
                     <h2 class="font-semibold text-[20px] mb-[25px] text-[#f0f0f0] font-PlusJakarta">
@@ -273,9 +273,738 @@
                   </div>
                 </div>
               </div>
+              <div class="flex justify-center gap-[10px] -mx-[5px] my-[0] flex-wrap">
+                <div class=" service-item [box-shadow:0_19px_10px_rgba(0,0,0,.06)] rounded-[20px] bg-[#222325] pt-[50px] px-[40px] pb-[45px] relative mb-[10px] z-[1]">
+                  <div class="services-item-overlay"></div>
+                  <div class="min-h-[50px] mb-[30px]  service-icon">
+                    <img src="./image/icon services/services_icon05.svg" alt="service1">
+                  </div>
+                  <div>
+                    <h2 class="font-semibold text-[20px] mb-[25px] text-[#f0f0f0] font-PlusJakarta">
+                      <a href="" class="hover:text-[#00c39a] [transition:all_.3s]">Text to speech for YouTube videos</a>
+                    </h2>
+                    <p class="mb-0 text-[#ababab] font-outfit text-[14px]">Unlike anything you've unique..</p>
+                  </div>
+                </div>
+                <div class=" service-item [box-shadow:0_19px_10px_rgba(0,0,0,.06)] rounded-[20px] bg-[#222325] pt-[50px] px-[40px] pb-[45px] relative mb-[10px] z-[1]">
+                  <div class="services-item-overlay"></div>
+                  <div class="min-h-[50px] mb-[30px] service-icon">
+                    <img src="./image/icon services/services_icon06.svg" alt="service1">
+                  </div>
+                  <div>
+                    <h2 class="font-semibold text-[20px] mb-[25px] text-[#f0f0f0] font-PlusJakarta">
+                      <a href="" class="hover:text-[#00c39a] [transition:all_.3s]">Text-to-speech for social shares</a>
+                    </h2>
+                    <p class="mb-0 text-[#ababab] font-outfit text-[14px]">Unlike anything you've unique..</p>
+                  </div>
+                </div>
+                <div class=" service-item [box-shadow:0_19px_10px_rgba(0,0,0,.06)] rounded-[20px] bg-[#222325] pt-[50px] px-[40px] pb-[45px] relative mb-[10px] z-[1]">
+                  <div class="services-item-overlay"></div>
+                  <div class="min-h-[50px] mb-[30px] service-icon">
+                    <img src="./image/icon services/services_icon07.svg" alt="service1">
+                  </div>
+                  <div>
+                    <h2 class="font-semibold text-[20px] mb-[25px] text-[#f0f0f0] font-PlusJakarta">
+                      <a href="" class="hover:text-[#00c39a] [transition:all_.3s]">Text to speech for education</a>
+                    </h2>
+                    <p class="mb-0 text-[#ababab] font-outfit text-[14px]">Unlike anything you've unique..</p>
+                  </div>
+                </div>
+                <div class=" service-item [box-shadow:0_19px_10px_rgba(0,0,0,.06)] rounded-[20px] bg-[#222325] pt-[50px] px-[40px] pb-[45px] relative mb-[10px] z-[1]">
+                  <div class="services-item-overlay"></div>
+                  <div class="min-h-[50px] mb-[30px] service-icon">
+                    <img src="./image/icon services/services_icon08.svg" alt="service1">
+                  </div>
+                  <div>
+                    <h2 class="font-semibold text-[20px] mb-[25px] text-[#f0f0f0] font-PlusJakarta">
+                      <a href="" class="hover:text-[#00c39a] [transition:all_.3s]">Text to speech for Web Applications</a>
+                    </h2>
+                    <p class="mb-0 text-[#ababab] font-outfit text-[14px]">Unlike anything you've unique..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="services-shade absolute right-[3%] top-[11%] z-[-1]">
+                <img src="./image/icon services/h3_services_shape.png" alt="service1">
+              </div>
+            </div>
+          </section>
+
+          <section class="about">
+            <div class="custom-container mr-auto ml-auto pl-[15px] pr-[15px]">
+                <div class="relative pl-[105px] about-content-wrap">
+                  <div class="mb-[50px]">
+                    <h2 class="title font-semibold text-[60px] mb-0 tracking-[-.02em] font-PlusJakarta">
+                      Mastering Content and Voiceover Creation 
+                      <span class="font-playfair italic">in 3 Simple Steps</span>
+                    </h2>
+                  </div>
+                  <div class=" grid grid-cols-[1fr_1fr]">
+                    <div class="about">
+                      <p class="mb-[45px] text-[#ababab] font-outfit">English, Arabic, German, Turkish, French, Italian, Russian, Chinese, Japanese, Korean... Convert your texts to speech naturally, fluently and realistically with more than 550 voices in 75+ languages with 140 dialects.</p>
+                      <ul>
+                        <li class="font-outfit flex  items-center mb-[15px] text-[18px] font-medium text-[#f0f0f0]">
+                          <i class="fa-light fa-hand-point-right text-[#f0f0f0] opacity-[.6] text-[20px] mr-[18px]"></i>Insert text,
+                        </li>
+                        <li class="font-outfit flex  items-center mb-[15px] text-[18px] font-medium text-[#f0f0f0]">
+                          <i class="fa-light fa-hand-point-right text-[#f0f0f0] opacity-[.6] text-[20px] mr-[18px]"></i>Choose a voice that you like,
+                        </li>
+                        <li class="font-outfit flex items-center mb-[15px] text-[18px] font-medium text-[#f0f0f0]">
+                          <i class="fa-light fa-hand-point-right text-[#f0f0f0] opacity-[.6] text-[20px] mr-[18px]"></i>Click on Generate and Download your voiceover!
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="about-img flex justify-end -mt-[40px] ">
+                      <img src="./image/h3_about_img.png" alt="aboutimg">
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </section>
+
+          <section class="pricing-area-three pb-[120px] pt-[130px] relative z-[1]">
+            <div class="custom-container mr-auto ml-auto pl-[15px] pr-[15px] ">
+              <div class="justify-center flex">
+                <div class="mb-[60px] w-[66%]">
+                  <h2 class="title font-PlusJakarta font-semibold text-[60px] mb-0 tracking-[-.02em] text-center">
+                    Our Pricing We Provide a
+                    <span class="font-playfair italic ">flexible plan</span>
+                  </h2>
+                </div>
+              </div>
+              <div class="pricing-item-wrap">
+                <div class="tab text-center mb-[60px]">
+                    <ul class="inline-flex border-[1px] border-[solid] border-[#393a3d] rounded-[30px] p-[6px] items-center">
+                        <li><button id="billing-monthly" class="nav-link active font-outfit bg-transparent border-[none] font-normal text-[18px] rounded-[30px] text-[#ababab] px-[20px] py-[10px] leading-none min-h-[48px]">
+                            Billed monthly
+                        </button></li>
+                        <li><button id="billing-yearly" class="nav-link font-outfit bg-transparent border-[none] font-normal text-[18px] rounded-[30px] text-[#ababab] px-[20px] py-[10px] leading-none min-h-[48px]">
+                            Billed yearly 
+                            <span class="bg-[#222325] rounded-[30px] inline-block px-[16px] py-[5px] ml-[20px] [transition:.3s]">
+                              30%
+                            </span>
+                        </button></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div id="tab-monthly" class="tab active">
+                        <div class="grid grid-cols-[1fr_1fr_1fr] gap-[10px]">
+                          <div class="rounded-[20px] pt-[45px] px-[40px] pb-[50px] bg-[#222325] mb-[10px] relative overflow-hidden z-[1]">
+                            <div class="pricing-content mb-[30px]">
+                              <h2 class="font-medium text-[24px] mb-[20px] text-[#f0f0f0] font-PlusJakarta">
+                                🤵 Personal
+                              </h2>
+                              <p class="mb-0 text-[#ababab] leading-normal font-outfit">
+                                Individual uses such as personal youtube, blog, social media, presentation, language learning
+                              </p>
+                            </div> 
+                            <div class="pricing-price">
+                              <h2 class="font-semibold text-[40px] mb-[20px] text-[#f0f0f0] tracking-[-.01em] font-PlusJakarta">
+                                Free
+                                <span class="font-normal text-[18px] text-[#ababab] font-outfit">
+                                  /month
+                                </span>
+                              </h2>
+                              <span class="text-[20px] block text-[#f0f0f0] leading-none mb-[25px] font-outfit">
+                                3.500 characters
+                              </span>
+                            </div> 
+                            <div class="user-wrap rounded-[5px] bg-[#151515] p-[10px] mb-[25px]">
+                              <span class="text-[14px] uppercase leading-none block text-[#ababab] mb-[10px] font-outfit"># Users</span>
+                              <input type="number" class="w-full outline-none bg-[#222325] border-[none] text-[#ababab] rounded-[5px] px-[10px] py-[8px] font-normal text-[14px] h-[40px]">
+                            </div>
+                            <div class="pricing-list">
+                              <ul class="mb-[35px]">
+                                <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Extra Characters For Tries
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>75+ Language, 140+ Variant
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>400 HD in 550+ Voices
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Corporate Invoice
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#f0f0f0] opacity-[.5] mb-[10px] line-through">
+                                  <i class="fa-sharp fa-solid fa-circle-xmark mr-[10px]"></i>Download As Mp3 File
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#f0f0f0] opacity-[.5] mb-[10px] line-through">
+                                  <i class="fa-sharp fa-solid fa-circle-xmark mr-[10px]"></i>API Access
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#f0f0f0] opacity-[.5] mb-[10px] line-through">
+                                  <i class="fa-sharp fa-solid fa-circle-xmark mr-[10px]"></i>Team Work
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#f0f0f0] opacity-[.5] mb-[10px] line-through">
+                                  <i class="fa-sharp fa-solid fa-circle-xmark mr-[10px]"></i>Standard License
+                                </li>
+                               
+                              </ul>
+                            </div>
+                            <div class="pricing-btn">
+                              <a href="#" class="w-full btn-pricing font-outfit bg-[#151515] rounded-[5px] text-[#f0f0f0]  border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:all_.5s] align-middle whitespace-nowrap relative">
+                                CHOOSE PLAN <i class="fa-solid fa-arrow-right -rotate-45 ml-[10px] arrow [transition:all_.3s]"></i>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="rounded-[20px] pt-[45px] px-[40px] pb-[50px] bg-[#222325] mb-[10px] relative overflow-hidden z-[1]">
+                            <span class="bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] inline-block uppercase text-[14px] text-[#151515] font-medium leading-none px-[36px] py-[8px] absolute -right-[38px] top-[18px] rotate-[40deg]">
+                              BEST OFFER
+                            </span>
+                            <div class="pricing-content mb-[30px]">
+                              <h2 class="font-medium text-[24px] mb-[20px] text-[#f0f0f0] font-PlusJakarta">
+                                👑 Pro
+                              </h2>
+                              <p class="mb-0 text-[#ababab] leading-normal font-outfit">
+                                Individual uses such as personal youtube, blog, social media, presentation, language learning
+                              </p>
+                            </div> 
+                            <div class="pricing-price">
+                              <h2 class="font-semibold text-[40px] mb-[20px] text-[#f0f0f0] tracking-[-.01em] font-PlusJakarta">
+                                $79
+                                <span class="font-normal text-[18px] text-[#ababab] font-outfit">
+                                  /month
+                                </span>
+                              </h2>
+                              <span class="text-[20px] block text-[#f0f0f0] leading-none mb-[25px] font-outfit">
+                                70.000 characters
+                              </span>
+                            </div> 
+                            <div class="user-wrap rounded-[5px] bg-[#151515] p-[10px] mb-[25px]">
+                              <span class="text-[14px] uppercase leading-none block text-[#ababab] mb-[10px] font-outfit"># Users</span>
+                              <input type="number" class="w-full outline-none bg-[#222325] border-[none] text-[#ababab] rounded-[5px] px-[10px] py-[8px] font-normal text-[14px] h-[40px]">
+                            </div>
+                            <div class="pricing-list">
+                              <ul class="mb-[35px]">
+                                <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Extra Characters For Tries
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>75+ Language, 140+ Variant
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>400 HD in 550+ Voices
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Corporate Invoice
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab] mb-[10px] ">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Download As Mp3 File
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab]  mb-[10px] ">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>API Access
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#f0f0f0] opacity-[.5] mb-[10px] line-through">
+                                  <i class="fa-sharp fa-solid fa-circle-xmark mr-[10px]"></i>Team Work
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#f0f0f0] opacity-[.5] mb-[10px] line-through">
+                                  <i class="fa-sharp fa-solid fa-circle-xmark mr-[10px]"></i>Standard License
+                                </li>
+                               
+                              </ul>
+                            </div>
+                            <div class="pricing-btn">
+                              <a href="#" class="w-full font-outfit bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#f0f0f0] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:all_.5s] align-middle whitespace-nowrap relative">
+                                CHOOSE PLAN 
+                              </a>
+                            </div>
+                          </div>
+                          <div class="rounded-[20px] pt-[45px] px-[40px] pb-[50px] bg-[#222325] mb-[10px] relative overflow-hidden z-[1]">
+                            <div class="pricing-content mb-[30px]">
+                              <h2 class="font-medium text-[24px] mb-[20px] text-[#f0f0f0] font-PlusJakarta">
+                                🌟 Enterprise
+                              </h2>
+                              <p class="mb-0 text-[#ababab] leading-normal font-outfit">
+                                Individual uses such as personal youtube, blog, social media, presentation, language learning
+                              </p>
+                            </div> 
+                            <div class="pricing-price">
+                              <h2 class="font-semibold text-[40px] mb-[20px] text-[#f0f0f0] tracking-[-.01em] font-PlusJakarta">
+                                $99
+                                <span class="font-normal text-[18px] text-[#ababab] font-outfit">
+                                  /month
+                                </span>
+                              </h2>
+                              <span class="text-[20px] block text-[#f0f0f0] leading-none mb-[25px] font-outfit">
+                                Unlimited characters
+                              </span>
+                            </div> 
+                            <div class="user-wrap rounded-[5px] bg-[#151515] p-[10px] mb-[25px]">
+                              <span class="text-[14px] uppercase leading-none block text-[#ababab] mb-[10px] font-outfit"># Users</span>
+                              <input type="number" class="w-full outline-none bg-[#222325] border-[none] text-[#ababab] rounded-[5px] px-[10px] py-[8px] font-normal text-[14px] h-[40px]">
+                            </div>
+                            <div class="pricing-list">
+                              <ul class="mb-[35px]">
+                                <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Extra Characters For Tries
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>75+ Language, 140+ Variant
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>400 HD in 550+ Voices
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Corporate Invoice
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab]  mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Download As Mp3 File
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab]  mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>API Access
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab]  mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Team Work
+                                </li>
+                                <li class="text-[16px] font-outfit text-[#ababab]  mb-[10px]">
+                                  <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Standard License
+                                </li>
+                               
+                              </ul>
+                            </div>
+                            <div class="pricing-btn">
+                              <a href="#" class="w-full font-outfit btn-pricing bg-[#151515] rounded-[5px] text-[#f0f0f0] border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:all_.5s] align-middle whitespace-nowrap relative">
+                                CHOOSE PLAN <i class="fa-solid fa-arrow-right -rotate-45 ml-[10px] arrow [transition:all_.3s]"></i>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div id="tab-yearly" class="tab">
+                      <div class="grid grid-cols-[1fr_1fr_1fr] gap-[10px]">
+                        <div class="rounded-[20px] pt-[45px] px-[40px] pb-[50px] bg-[#222325] mb-[10px] relative overflow-hidden z-[1]">
+                          <div class="pricing-content mb-[30px]">
+                            <h2 class="font-medium text-[24px] mb-[20px] text-[#f0f0f0] font-PlusJakarta">
+                              🤵 Personal
+                            </h2>
+                            <p class="mb-0 text-[#ababab] leading-normal font-outfit">
+                              Individual uses such as personal youtube, blog, social media, presentation, language learning
+                            </p>
+                          </div> 
+                          <div class="pricing-price">
+                            <h2 class="font-semibold text-[40px] mb-[20px] text-[#f0f0f0] tracking-[-.01em] font-PlusJakarta">
+                              Free
+                              <span class="font-normal text-[18px] text-[#ababab] font-outfit">
+                                /year
+                              </span>
+                            </h2>
+                            <span class="text-[20px] block text-[#f0f0f0] leading-none mb-[25px] font-outfit">
+                              3.500 characters
+                            </span>
+                          </div> 
+                          <div class="user-wrap rounded-[5px] bg-[#151515] p-[10px] mb-[25px]">
+                            <span class="text-[14px] uppercase leading-none block text-[#ababab] mb-[10px] font-outfit"># Users</span>
+                            <input type="number" class="w-full outline-none bg-[#222325] border-[none] text-[#ababab] rounded-[5px] px-[10px] py-[8px] font-normal text-[14px] h-[40px]">
+                          </div>
+                          <div class="pricing-list">
+                            <ul class="mb-[35px]">
+                              <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Extra Characters For Tries
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>75+ Language, 140+ Variant
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>400 HD in 550+ Voices
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Corporate Invoice
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#f0f0f0] opacity-[.5] mb-[10px] line-through">
+                                <i class="fa-sharp fa-solid fa-circle-xmark mr-[10px]"></i>Download As Mp3 File
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#f0f0f0] opacity-[.5] mb-[10px] line-through">
+                                <i class="fa-sharp fa-solid fa-circle-xmark mr-[10px]"></i>API Access
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#f0f0f0] opacity-[.5] mb-[10px] line-through">
+                                <i class="fa-sharp fa-solid fa-circle-xmark mr-[10px]"></i>Team Work
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#f0f0f0] opacity-[.5] mb-[10px] line-through">
+                                <i class="fa-sharp fa-solid fa-circle-xmark mr-[10px]"></i>Standard License
+                              </li>
+                             
+                            </ul>
+                          </div>
+                          <div class="pricing-btn">
+                            <a href="#" class="w-full font-outfit btn-pricing bg-[#151515] rounded-[5px] text-[#f0f0f0] border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:all_.5s] align-middle whitespace-nowrap relative">
+                              CHOOSE PLAN <i class="fa-solid fa-arrow-right -rotate-45 ml-[10px] arrow [transition:all_.3s]"></i>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="rounded-[20px] pt-[45px] px-[40px] pb-[50px] bg-[#222325] mb-[10px] relative overflow-hidden z-[1]">
+                          <span class="bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] inline-block uppercase text-[14px] text-[#151515] font-medium leading-none px-[36px] py-[8px] absolute -right-[38px] top-[18px] rotate-[40deg]">
+                            BEST OFFER
+                          </span>
+                          <div class="pricing-content mb-[30px]">
+                            <h2 class="font-medium text-[24px] mb-[20px] text-[#f0f0f0] font-PlusJakarta">
+                              👑 Pro
+                            </h2>
+                            <p class="mb-0 text-[#ababab] leading-normal font-outfit">
+                              Individual uses such as personal youtube, blog, social media, presentation, language learning
+                            </p>
+                          </div> 
+                          <div class="pricing-price">
+                            <h2 class="font-semibold text-[40px] mb-[20px] text-[#f0f0f0] tracking-[-.01em] font-PlusJakarta">
+                              $799
+                              <span class="font-normal text-[18px] text-[#ababab] font-outfit">
+                                /year
+                              </span>
+                            </h2>
+                            <span class="text-[20px] block text-[#f0f0f0] leading-none mb-[25px] font-outfit">
+                              70.000 characters
+                            </span>
+                          </div> 
+                          <div class="user-wrap rounded-[5px] bg-[#151515] p-[10px] mb-[25px]">
+                            <span class="text-[14px] uppercase leading-none block text-[#ababab] mb-[10px] font-outfit"># Users</span>
+                            <input type="number" class="w-full outline-none bg-[#222325] border-[none] text-[#ababab] rounded-[5px] px-[10px] py-[8px] font-normal text-[14px] h-[40px]">
+                          </div>
+                          <div class="pricing-list">
+                            <ul class="mb-[35px]">
+                              <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Extra Characters For Tries
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>75+ Language, 140+ Variant
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>400 HD in 550+ Voices
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Corporate Invoice
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab] mb-[10px] ">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Download As Mp3 File
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab]  mb-[10px] ">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>API Access
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#f0f0f0] opacity-[.5] mb-[10px] line-through">
+                                <i class="fa-sharp fa-solid fa-circle-xmark mr-[10px]"></i>Team Work
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#f0f0f0] opacity-[.5] mb-[10px] line-through">
+                                <i class="fa-sharp fa-solid fa-circle-xmark mr-[10px]"></i>Standard License
+                              </li>
+                             
+                            </ul>
+                          </div>
+                          <div class="pricing-btn">
+                            <a href="#" class="w-full font-outfit bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#f0f0f0] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:all_.5s] align-middle whitespace-nowrap relative">
+                              CHOOSE PLAN
+                            </a>
+                          </div>
+                        </div>
+                        <div class="rounded-[20px] pt-[45px] px-[40px] pb-[50px] bg-[#222325] mb-[10px] relative overflow-hidden z-[1]">
+                          <div class="pricing-content mb-[30px]">
+                            <h2 class="font-medium text-[24px] mb-[20px] text-[#f0f0f0] font-PlusJakarta">
+                              🌟 Enterprise
+                            </h2>
+                            <p class="mb-0 text-[#ababab] leading-normal font-outfit">
+                              Individual uses such as personal youtube, blog, social media, presentation, language learning
+                            </p>
+                          </div> 
+                          <div class="pricing-price">
+                            <h2 class="font-semibold text-[40px] mb-[20px] text-[#f0f0f0] tracking-[-.01em] font-PlusJakarta">
+                              $999
+                              <span class="font-normal text-[18px] text-[#ababab] font-outfit">
+                                /month
+                              </span>
+                            </h2>
+                            <span class="text-[20px] block text-[#f0f0f0] leading-none mb-[25px] font-outfit">
+                              Unlimited characters
+                            </span>
+                          </div> 
+                          <div class="user-wrap rounded-[5px] bg-[#151515] p-[10px] mb-[25px]">
+                            <span class="text-[14px] uppercase leading-none block text-[#ababab] mb-[10px] font-outfit"># Users</span>
+                            <input type="number" class="w-full outline-none bg-[#222325] border-[none] text-[#ababab] rounded-[5px] px-[10px] py-[8px] font-normal text-[14px] h-[40px]">
+                          </div>
+                          <div class="pricing-list">
+                            <ul class="mb-[35px]">
+                              <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Extra Characters For Tries
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>75+ Language, 140+ Variant
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>400 HD in 550+ Voices
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab] mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Corporate Invoice
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab]  mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Download As Mp3 File
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab]  mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>API Access
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab]  mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Team Work
+                              </li>
+                              <li class="text-[16px] font-outfit text-[#ababab]  mb-[10px]">
+                                <i class="fa-sharp fa-solid fa-circle-check mr-[10px]"></i>Standard License
+                              </li>
+                             
+                            </ul>
+                          </div>
+                          <div class="pricing-btn">
+                            <a href="#" class="w-full btn-pricing font-outfit bg-[#151515] rounded-[5px] text-[#f0f0f0] border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:all_.5s] align-middle whitespace-nowrap relative">
+                              CHOOSE PLAN <i class="fa-solid fa-arrow-right -rotate-45 ml-[10px] arrow [transition:all_.3s]"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="pricing-shade">
+              <img src="./image/h3_pricing_shape01.png" alt="" class="rotate-shade absolute right-[5%] top-[3%] z-[-1]">
+              <img src="./image/h3_pricing_shape02.png" alt="" class="jumPricing">
+            </div>
+          </section>
+
+          <section class="testimonial relative px-[0] z-[1] pb-[120px] overflow-hidden">
+            <div class="custom-container mr-auto ml-auto pl-[15px] pr-[15px]">
+                <div class="flex justify-center">
+                  <div class="mb-[70px] w-[50%]">
+                      <h2 class="title font-semibold text-[60px] mb-0 tracking-[-.02em] font-PlusJakarta text-center">
+                        What Our Happy Users
+                        <span class="font-playfair italic">say about us</span>
+                      </h2>
+                  </div>
+                </div>
+                
+            </div>
+            <div class="flex">
+              <swiper-container class="mySwiper w-full h-full"  slides-per-view="4" loop="true" autoplay="true" >
+                <swiper-slide class="mr-[5px]">
+                  <div class="testimonial-item rounded-[20px] bg-[#222325] pt-[50px] px-[40px] pb-[40px] max-w-[650px] w-full  ">
+                    <div class="flex items-center justify-between mb-[25px]">
+                      <div class="testimonial-avatar flex items-center">
+                        <div class="w-[70px] flex-[0_0_auto] mr-[20px]">
+                          <img src="./image/h3_testi_avatar02.png" alt="">
+                        </div>
+                        <div class="avatar-info">
+                          <h2 class="font-PlusJakarta font-semibold text-[18px] mb-[8px] tracking-[.04em] text-[#f0f0f0]">
+                            Jeremy McPeak
+                          </h2>
+                          <span class="text-[#ababab] font-outfit">@Jeremy McPeak</span>
+                        </div>
+                      </div>
+                      <div class="testimonial-rating flex items-center">
+                        <span class="font-medium text-[18px] text-[#f0f0f0] font-PlusJakarta">4.5</span>
+                        <img src="./image/star.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="testimonial-content">
+                      <p class="text-[22px] mb-0 leading-[1.4] text-[#f0f0f0]">
+                        "This text to speech software has been a real lifesaver for me. As someone who struggles with reading due to dyslexia, I can now listen to articles and documents with ease. The natural-sounding voice and customization options make it a joy to use. Whether I'm driving, working out, or just need a break!"
+                      </p>
+                    </div>
+                </div>
+                </swiper-slide>
+                <swiper-slide class="mr-[5px]">
+                  <div class="testimonial-item rounded-[20px] bg-[#222325] pt-[50px] px-[40px] pb-[40px] max-w-[650px] w-full  ">
+                    <div class="flex items-center justify-between mb-[25px]">
+                      <div class="testimonial-avatar flex items-center">
+                        <div class="w-[70px] flex-[0_0_auto] mr-[20px]">
+                          <img src="./image/h3_testi_avatar01.png" alt="">
+                        </div>
+                        <div class="avatar-info">
+                          <h2 class="font-PlusJakarta font-semibold text-[18px] mb-[8px] tracking-[.04em] text-[#f0f0f0]">
+                            Jeremy McPeak
+                          </h2>
+                          <span class="text-[#ababab] font-outfit">@Jeremy McPeak</span>
+                        </div>
+                      </div>
+                      <div class="testimonial-rating flex items-center">
+                        <span class="font-medium text-[18px] text-[#f0f0f0] font-PlusJakarta">4.5</span>
+                        <img src="./image/star.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="testimonial-content">
+                      <p class="text-[22px] mb-0 leading-[1.4] text-[#f0f0f0]">
+                        "I've tried other text to speech programs before, but this one is by far the best. The voice sounds natural and the customization do the same”
+                      </p>
+                    </div>
+                </div>
+                </swiper-slide>
+                <swiper-slide class="mr-[5px]">
+                  <div class="testimonial-item rounded-[20px] bg-[#222325] pt-[50px] px-[40px] pb-[40px] max-w-[650px] w-full  ">
+                    <div class="flex items-center justify-between mb-[25px]">
+                      <div class="testimonial-avatar flex items-center">
+                        <div class="w-[70px] flex-[0_0_auto] mr-[20px]">
+                          <img src="./image/h3_testi_avatar03.png" alt="">
+                        </div>
+                        <div class="avatar-info">
+                          <h2 class="font-PlusJakarta font-semibold text-[18px] mb-[8px] tracking-[.04em] text-[#f0f0f0]">
+                            Jeremy McPeak
+                          </h2>
+                          <span class="text-[#ababab] font-outfit">@Jeremy McPeak</span>
+                        </div>
+                      </div>
+                      <div class="testimonial-rating flex items-center">
+                        <span class="font-medium text-[18px] text-[#f0f0f0] font-PlusJakarta">4.5</span>
+                        <img src="./image/star.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="testimonial-content">
+                      <p class="text-[22px] mb-0 leading-[1.4] text-[#f0f0f0]">
+                        "This text to speech software has been a real lifesaver for me. As someone who struggles with reading due to dyslexia, I can now listen to articles and documents with ease. The natural-sounding voice and customization options make it a joy to use. Whether I'm driving, working out, or just need a break!"
+                      </p>
+                    </div>
+                </div>
+                </swiper-slide>
+                <swiper-slide class="mr-[5px]">
+                  <div class="testimonial-item rounded-[20px] bg-[#222325] pt-[50px] px-[40px] pb-[40px] max-w-[650px] w-full  ">
+                    <div class="flex items-center justify-between mb-[25px]">
+                      <div class="testimonial-avatar flex items-center">
+                        <div class="w-[70px] flex-[0_0_auto] mr-[20px]">
+                          <img src="./image/h3_testi_avatar04.png" alt="">
+                        </div>
+                        <div class="avatar-info">
+                          <h2 class="font-PlusJakarta font-semibold text-[18px] mb-[8px] tracking-[.04em] text-[#f0f0f0]">
+                            Jeremy McPeak
+                          </h2>
+                          <span class="text-[#ababab] font-outfit">@Jeremy McPeak</span>
+                        </div>
+                      </div>
+                      <div class="testimonial-rating flex items-center">
+                        <span class="font-medium text-[18px] text-[#f0f0f0] font-PlusJakarta">4.5</span>
+                        <img src="./image/star.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="testimonial-content">
+                      <p class="text-[22px] mb-0 leading-[1.4] text-[#f0f0f0]">
+                        "As a busy professional, I'm always on the go. Thanks to this text to speech software, I can stay productive no matter where I am. It's fast, easy to use."
+                      </p>
+                    </div>
+                </div>
+                </swiper-slide>
+                <swiper-slide class="mr-[5px]">
+                  <div class="testimonial-item rounded-[20px] bg-[#222325] pt-[50px] px-[40px] pb-[40px] max-w-[650px] w-full  ">
+                    <div class="flex items-center justify-between mb-[25px]">
+                      <div class="testimonial-avatar flex items-center">
+                        <div class="w-[70px] flex-[0_0_auto] mr-[20px]">
+                          <img src="./image/h3_testi_avatar04.png" alt="">
+                        </div>
+                        <div class="avatar-info">
+                          <h2 class="font-PlusJakarta font-semibold text-[18px] mb-[8px] tracking-[.04em] text-[#f0f0f0]">
+                            Jeremy McPeak
+                          </h2>
+                          <span class="text-[#ababab] font-outfit">@Jeremy McPeak</span>
+                        </div>
+                      </div>
+                      <div class="testimonial-rating flex items-center">
+                        <span class="font-medium text-[18px] text-[#f0f0f0] font-PlusJakarta">4.5</span>
+                        <img src="./image/star.svg" alt="">
+                      </div>
+                    </div>
+                    <div class="testimonial-content">
+                      <p class="text-[22px] mb-0 leading-[1.4] text-[#f0f0f0]">
+                        "As a busy professional, I'm always on the go. Thanks to this text to speech software, I can stay productive no matter where I am. It's fast, easy to use."
+                      </p>
+                    </div>
+                </div>
+                </swiper-slide>
+              </swiper-container>
+            </div>
+          </section>
+
+          <section class="cta-area relative z-[1]">
+            <div class="custom-container mr-auto ml-auto pl-[15px] pr-[15px] ">
+              <div class="bg-[linear-gradient(84.61deg,#00c39a_1.1%,#fdcf6d_99.29%)] rounded-[20px] text-center px-[50px] py-[70px] flex justify-center">
+                <div class="content w-[67%] ">
+                  <div>
+                    <h2 class="font-semibold text-[45px] tracking-[-.02em] text-[#151515] mb-[20px] font-PlusJakarta">
+                      Provide Affordable Text-To-Speech
+                      <span class="font-medium italic font-playfair">
+                        solutions for everyone
+                      </span>
+                    </h2>
+                  </div>
+                 <a href="" class="btn-for-free  text-[#fff] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center [transition:all_.3s_ease_0s] align-middle whitespace-nowrap relative overflow-hidden bg-[#151515] rounded-[5px]">
+                    TRY NOW FOR FREE <i class="fa-solid fa-arrow-right -rotate-45 ml-[10px] arrow [transition:all_.3s]"></i>
+                 </a>
+                </div>
+              </div>
+              <div class="cta-shade">
+                <img src="./image/cta_shape01.png" alt="cta" class="absolute -top-[30px] right-[23%] z-[-1]">
+                <img src="./image/cta_shape02.png" alt="cta" class="absolute left-[20%] -bottom-[65px] z-[-1]">
+              </div>
             </div>
           </section>
       </main>
+      <footer>
+        <div class="footer bg-[#151515]">
+          <div class="custom-container mr-auto ml-auto pl-[15px] pr-[15px] ">
+            <div class="pt-[100px] px-[0] pb-[30px]">
+              <div class="grid grid-cols-[1fr_1fr_1fr_1fr_2fr]">
+                <div class="footer-widget mb-[40px]">
+                  <h4 class="mb-[35px] uppercase text-[14px] tracking-[.05em] font-PlusJakarta text-[#fff] font-semibold">HOW TO CREATES</h4>
+                  <ul class="list-wrap">
+                    <li class="font-outfit mb-[8px] text-[#ababab]"><a href="">Animation Videos</a></li>
+                    <li class="font-outfit mb-[8px] text-[#ababab]"><a href="">Video Games</a></li>
+                    <li class="font-outfit mb-[8px] text-[#ababab]"><a href="">IVR Voices</a></li>
+                    <li class="font-outfit mb-[8px] text-[#ababab]"><a href="">Youtube Videos</a></li>
+                  </ul>
+                </div>
+                <div class="footer-widget mb-[40px]">
+                  <h4 class="mb-[35px] uppercase text-[14px] tracking-[.05em] font-PlusJakarta text-[#fff] font-semibold">ABOUT US</h4>
+                  <ul class="list-wrap">
+                    <li class="font-outfit mb-[8px] text-[#ababab]"><a href="">Animation Videos</a></li>
+                    <li class="font-outfit mb-[8px] text-[#ababab]"><a href="">Video Games</a></li>
+                    <li class="font-outfit mb-[8px] text-[#ababab]"><a href="">IVR Voices</a></li>
+                    <li class="font-outfit mb-[8px] text-[#ababab]"><a href="">Youtube Videos</a></li>
+                  </ul>
+                </div>
+                <div class="footer-widget mb-[40px]">
+                  <h4 class="mb-[35px] uppercase text-[14px] tracking-[.05em] font-PlusJakarta text-[#fff] font-semibold">CONTACT</h4>
+                  <ul class="list-wrap">
+                    <li class="font-outfit mb-[8px] text-[#ababab]"><a href="">Animation Videos</a></li>
+                    <li class="font-outfit mb-[8px] text-[#ababab]"><a href="">Video Games</a></li>
+                    <li class="font-outfit mb-[8px] text-[#ababab]"><a href="">IVR Voices</a></li>
+                    <li class="font-outfit mb-[8px] text-[#ababab]"><a href="">Youtube Videos</a></li>
+                  </ul>
+                </div>
+                <div class="footer-widget mb-[40px]">
+                  <h4 class="mb-[35px] uppercase text-[14px] tracking-[.05em] font-PlusJakarta text-[#fff] font-semibold">DOWNLOAD APP</h4>
+                  <div class="app-download grid grid-cols-[1fr] gap-[10px]">
+                    <a href=""><img src="./image/appstore.png" alt="" class="max-w-[130px]"></a>
+                   <a href=""> <img src="./image/googleplay.png" alt="" class="max-w-[130px]"></a>
+                  </div>
+                </div>
+                <div class="footer-widget mb-[40px]">
+                  <h4 class="mb-[35px] uppercase text-[14px] tracking-[.05em] font-PlusJakarta text-[#fff] font-semibold">KEEP UP TO DATE</h4>
+                  <div class="app-download grid grid-cols-[1fr] gap-[10px]">
+                    <p class="font-semibold text-[22px] mb-[35px] tracking-[-.02em] text-[#f0f0f0] leading-[1.4]">
+                      Join our community!
+                      Subscribe to the free newsletter
+                    </p>
+                    <form action="" class="grid grid-cols-[70%_30%] gap-[15px]">
+                      <input type="text" placeholder="Email your address" class="outline-none w-full border-[1px] border-[solid] border-[#393a3d] rounded-[5px] bg-transparent font-normal text-[16px] px-[20px] py-[5px] text-[#f0f0f0] h-[40px]">
+                      <button type="submit" class="text-[14px] h-[40px] w-full text-[#fff] px-[30px] py-[10px] bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] font-outfit">
+                        SIGN IN
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="border-t border-solid border-[#393a3d]">
+            <div class="px-[0] py-[34px]">
+              <div class="copyright-text">
+                <p class="font-outfit text-[#ababab]">
+                  Copyright © 2023 DEX.AI All rights reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <a href="" id="scrollToTop" class="fixed z-[9999] bg-[#6721ff] w-[35px] h-[35px] leading-[35px] text-center cursor-pointer right-[20px] bottom-[61px] rounded-[6px] text-[#fff]">
+        <i class="fa-regular fa-angle-up"></i>
+      </a>
     </div>
     <script type="module" src="/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
