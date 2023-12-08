@@ -5,9 +5,7 @@
 @tailwind utilities;
 
 
-.custom-container{
-    max-width: 1320px;
-}
+
 #sticky-header {
     transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
     position: fixed;
@@ -16,25 +14,11 @@
 .sticky{
     background: #151515;
 }
-.menu-link {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: capitalize;
-    padding: 40px 26px;
-    display: block;
-    position: relative;
-    line-height: 1;
-    letter-spacing: 0.05em;
-    color: white;
-    transition: color 0.3s ease;
-  }
+
 .active{
     color: #00c39a;
 }
-.menu-link:hover {
-    color: #00c39a;
-  }
+
 .gradient-btn::after{
     content: "\f061";
     margin-left: 20px;
@@ -62,6 +46,9 @@
 .dropdown-menu {
     transition: all 0.3s ease;
 }
+
+/*  main */
+
 .title{
     background: linear-gradient(179.14deg,#f0f0f0 7.77%,#171717 120.01%);
     -webkit-background-clip: text;
@@ -117,10 +104,7 @@
 
 
 
-.service-item {
-   width: 100%;
-    max-width: 315px;
-}
+
 .service-icon img {
     opacity: .5;
     transform: rotateY(0);

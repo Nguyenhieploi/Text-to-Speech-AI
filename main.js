@@ -61,8 +61,75 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-   
-  });
+var swiper = new Swiper('.mySwiper', {
+    // Default parameters
+    loop:true,
+    autoplay:true,
+    // Responsive breakpoints
+    breakpoints: {
+        
+        320: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 50
+        },
+        
+        820: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 50
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetweenSlides: 50
+        },
+      
+        // từ 1366 trở đi sẽ áp dụng
+        1366: {
+            slidesPerView: 5,
+            spaceBetweenSlides: 50
+        },
+        //từ  1600 sẽ áp dụng
+        1600: {
+            slidesPerView: 7,
+            spaceBetweenSlides: 50
+        }
+    }
+})
+
+
+var swiper = new Swiper('.testimonialss', {
+    // Default parameters
+    loop:true,
+    autoplay:true,
+    
+    // Responsive breakpoints
+    breakpoints: {
+        
+        320: {
+            slidesPerView: 1,
+            spaceBetweenSlides: 50
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 50
+        },
+        820: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 50
+        },
+        1024: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 50
+        },
+      
+        // từ 1200 trở đi sẽ áp dụng
+        1200: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 50
+        },
+        //từ  1600 sẽ áp dụng
+        1600: {
+            slidesPerView: 4,
+            spaceBetweenSlides: 50
+        }
+    }
+})

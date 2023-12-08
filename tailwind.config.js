@@ -11,6 +11,10 @@ export default {
         playfair:["Playfair Display",'serif'],
         PlusJakarta:["Plus Jakarta Sans",'sans-serif']
       },
+      screens: {
+        'desktop': {'max': '1200px'},
+        'tablet': {'min': '768px', 'max': '1024px'}
+      },
     },
   },
   plugins: [],
