@@ -57,3 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // Gọi hàm khi trang được tải
     handleScrollActions();
 });
+
+
+
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+   
+  });
