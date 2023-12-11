@@ -70,18 +70,24 @@ var swiper = new Swiper('.mySwiper', {
         
         320: {
             slidesPerView: 2,
+         
+        },
+        576: {
+            slidesPerView: 3,
             spaceBetweenSlides: 50
         },
-        
         820: {
             slidesPerView: 3,
             spaceBetweenSlides: 50
         },
         1024: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 50
+        },
+        1200: {
             slidesPerView: 4,
             spaceBetweenSlides: 50
         },
-      
         // từ 1366 trở đi sẽ áp dụng
         1366: {
             slidesPerView: 5,
@@ -89,6 +95,10 @@ var swiper = new Swiper('.mySwiper', {
         },
         //từ  1600 sẽ áp dụng
         1600: {
+            slidesPerView: 6,
+            spaceBetweenSlides: 50
+        },
+        1700: {
             slidesPerView: 7,
             spaceBetweenSlides: 50
         }
@@ -100,6 +110,7 @@ var swiper = new Swiper('.testimonialss', {
     // Default parameters
     loop:true,
     autoplay:true,
+  
     
     // Responsive breakpoints
     breakpoints: {
@@ -133,3 +144,39 @@ var swiper = new Swiper('.testimonialss', {
         }
     }
 })
+
+// menu
+var menuMobile = document.getElementById("menu-main");
+var toggleMobile = document.querySelector(".toogle-mobile");
+var markMobile = document.querySelector(".icon-mark");
+
+function showMenu() {
+  menuMobile.style.transform = "translateX(0%)";
+  toggleMobile.style.display = "none";
+  markMobile.style.display = "block";
+
+  document.addEventListener("click", closeMenuOnClickOutside);
+}
+
+function hideMenu() {
+  menuMobile.style.transform = "translateX(-100%)";
+  toggleMobile.style.display = "block";
+  markMobile.style.display = "none";
+
+ 
+  document.removeEventListener("click", closeMenuOnClickOutside);
+}
+
+function closeMenuOnClickOutside(event) {
+  // Kiểm tra xem sự kiện click có phát sinh từ menu hay không
+  if (!menuMobile.contains(event.target) && event.target !== toggleMobile) {
+    hideMenu();
+  }
+}
+
+toggleMobile.addEventListener("click", showMenu);
+markMobile.addEventListener("click", hideMenu);
+markMobile.style.display = "none";
+
+
+

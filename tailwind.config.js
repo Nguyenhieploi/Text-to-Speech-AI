@@ -13,7 +13,10 @@ export default {
       },
       screens: {
         'desktop': {'max': '1200px'},
-        'tablet': {'min': '768px', 'max': '1024px'}
+        'tablet': {'min': '768px', 'max': '1024px'},
+        'tooglemenu' : {'max': '1024px'},
+        'mobile': {'max': '768px'},
+        'mobil576px':{'max': '576px'}
       },
     },
   },
