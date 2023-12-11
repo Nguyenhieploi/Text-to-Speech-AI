@@ -2,7 +2,8 @@
 export default {
   content: [
     "./index.html",
-    "./login.html"
+    "./login.html",
+    "./resgister.html"
   ],
   theme: {
     extend: {
