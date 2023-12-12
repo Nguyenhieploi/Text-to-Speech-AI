@@ -8,80 +8,93 @@
     <link rel="stylesheet" href="./font/font-awesome6pro/css/all.css">
 </head>
 <body>
-    <header>
-        <div id="sticky-header" class="tablet:px-0 tooglemenu:py-[20px] absolute left- top-[0] w-full h-auto z-10" >
-          <div class="tablet:max-w-[720px] header max-w-[1630px] ml-auto mr-auto pl-[15px] pr-[15px]">
-            <div  class="tooglemenu:block hidden ml-[35px] px-[10px] py-[5px] text-[#00c39a] mt-0 relative float-right text-[27px] cursor-pointer leading-none border-[2px] border-[solid] border-[#00c39a]">
-              <i class="fa-regular fa-bars toogle-mobile"></i>
-              <i class="fa-light fa-xmark icon-mark"></i>
-            </div>
-            
-            <div class="menu-wrap">
-              <nav class="tooglemenu:justify-between flex items-center flex-wrap justify-start">
-                <div class="logo">
-                  <a href="index.html"><img src="./image/logo.png" alt="Logo"></a>
-                </div>
-                <div id="menu-main" class="tooglemenu:z-[50] tooglemenu:[transition:all_.5s] tooglemenu:-translate-x-full tooglemenu:fixed tooglemenu:left-[0] tooglemenu:top-[0] tooglemenu:w-[300px] 
-                tooglemenu:max-w-full tooglemenu:h-screen main-menu flex-grow flex">
-                  <ul class="tooglemenu:bg-[#222325] tooglemenu:absolute tooglemenu:h-full tooglemenu:top-[0] tooglemenu:right-[0] tooglemenu:w-full tooglemenu:-full tooglemenu:block 
-                  tooglemenu:overflow-y-auto tooglemenu:overflow-x-hidden flex flex-row flex-wrap p-0 mx-[auto] my-[0]">
-                    <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[40px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] active font-outfit hover:text-[#00c39a]" href="/">Home</a></li>
-                    <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[40px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#00c39a]" href="#">About Us</a></li>
-                    <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[40px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#00c39a]" href="#">Help Center</a></li>
-                    <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[40px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#00c39a]" href="#">News</a></li>
-                    <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[40px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#00c39a]" href="#">Contact</a></li>
-                    <li class="hidden mobile:block mobile:py-[25px] pl-[15px] pr-[15px] relative">
-                      <a href="./resgister.html" class="tooglemenu:py-[15px] w-full font-outfit bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#000] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:.3s] align-middle whitespace-nowrap relative">
-                        SIGN UP 
-                      </a>
-                    </li>
-                    <li class="hidden mobile:block  pl-[15px] pr-[15px] header-lang relative">
-                      <div class="dropdown relative">
-                          <button class="border-[none] bg-transparent p-0 font-normal text-[14px] uppercase flex items-center gap-[5px] text-white">
-                              <img src="./image/lang-en.jpg" alt="en" class="rounded-[10px]">
-                              EN
-                              <i class="fa-solid fa-angle-down"></i>
-                          </button>
-                          <div class="dropdown-menu hidden absolute left-0 w-40 bg-white border border-gray-200 p-2 mt-[0px] rounded-[5px]">
-                              <button class="border-[none] bg-transparent [transition:all_.5s] p-0 font-normal text-[14px] uppercase flex items-center gap-[5px]">
-                                  <img src="./image/russia.jpg" alt="vi" class="rounded-[10px]">
-                                  VN
-                              </button>
-                          </div>
-                      </div>
-                    </li>
-                  </ul>
-                 
-                </div>
-                <div class="mobile:hidden header-action">
-                  <ul class="flex items-center">
-                    <li class="ml-0 header-lang relative">
-                      <div class="dropdown relative">
-                          <button class="border-[none] bg-transparent p-0 font-normal text-[14px] uppercase flex items-center gap-[5px] text-white">
-                              <img src="./image/lang-en.jpg" alt="en" class="rounded-[10px]">
-                              EN
-                              <i class="fa-solid fa-angle-down"></i>
-                          </button>
-                          <div class="dropdown-menu hidden absolute right-0 w-40 bg-white border border-gray-200 p-2 mt-[0px] rounded-[5px]">
-                              <button class="border-[none] bg-transparent p-0 font-normal text-[14px] uppercase flex items-center gap-[5px]">
-                                  <img src="./image/russia.jpg" alt="vi" class="rounded-[10px]">
-                                  VN
-                              </button>
-                          </div>
-                      </div>
-                  </li>
-                    <li class="ml-[40px] relative">
-                      <a href="./login.html" class="tooglemenu:py-[15px] font-outfit bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#000] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:.3s] align-middle whitespace-nowrap relative">
-                        SIGN UP 
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
-            </div>
-          </div>
+  <header>
+    <div id="sticky-header" class="tablet:px-0 tooglemenu:py-[20px] absolute left- top-[0] w-full h-auto z-10" >
+      <div class="tablet:max-w-[720px] header max-w-[1630px] ml-auto mr-auto pl-[15px] pr-[15px]">
+        <div  class="tooglemenu:block hidden ml-[35px] px-[10px] py-[5px] text-[#00c39a] mt-0 relative float-right text-[27px] cursor-pointer leading-none border-[2px] border-[solid] border-[#00c39a]">
+          <i class="fa-regular fa-bars toogle-mobile"></i>
+          <i class="fa-light fa-xmark icon-mark"></i>
         </div>
-      </header>
+        
+        <div class="menu-wrap">
+          <nav class="tooglemenu:justify-between flex items-center flex-wrap justify-start">
+            <div class="logo">
+              <a href="/"><img src="./image/logo.png" alt="Logo"></a>
+            </div>
+            <div id="menu-main" class="tooglemenu:hidden tooglemenu:z-[50] tooglemenu:[transition:all_.5s] tooglemenu:-translate-x-full tooglemenu:fixed tooglemenu:left-[0] tooglemenu:top-[0] tooglemenu:w-[300px] 
+            tooglemenu:max-w-full tooglemenu:h-screen main-menu flex-grow flex">
+              <ul class="tooglemenu:bg-[#222325] tooglemenu:absolute tooglemenu:h-full tooglemenu:top-[0] tooglemenu:right-[0] tooglemenu:w-full tooglemenu:-full tooglemenu:block 
+              tooglemenu:overflow-y-auto tooglemenu:overflow-x-hidden flex flex-row flex-wrap p-0 mx-[auto] my-[0]">
+                <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[40px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] active font-outfit hover:text-[#00c39a]" href="/">Home</a></li>
+                <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[40px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#00c39a]" href="#">About Us</a></li>
+                <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[40px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#00c39a]" href="#">Help Center</a></li>
+                <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[40px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#00c39a]" href="#">News</a></li>
+                <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[40px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#00c39a]" href="#">Contact</a></li>
+              </ul>
+             
+            </div>
+            <!-- Mobile -->
+            <div id="menu-mobile" class="tooglemenu:block  hidden tooglemenu:z-[50] tooglemenu:[transition:all_.5s] tooglemenu:-translate-x-full tooglemenu:fixed tooglemenu:left-[0] tooglemenu:top-[0] tooglemenu:w-[300px] 
+            tooglemenu:max-w-full tooglemenu:h-screen main-menu flex-grow">
+              <ul class="tooglemenu:bg-[#222325] tooglemenu:absolute tooglemenu:h-full tooglemenu:top-[0] tooglemenu:right-[0] tooglemenu:w-full tooglemenu:-full tooglemenu:block 
+              tooglemenu:overflow-y-auto tooglemenu:overflow-x-hidden flex flex-row flex-wrap p-0 mx-[auto] my-[0]">
+                <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[30px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] active font-outfit hover:text-[#00c39a]" href="/">Home</a></li>
+                <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[30px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#00c39a]" href="#">About Us</a></li>
+                <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[30px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#00c39a]" href="#">Help Center</a></li>
+                <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[30px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#00c39a]" href="#">News</a></li>
+                <li><a class="desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] py-[30px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#00c39a]" href="#">Contact</a></li>
+                <li class="desktop:px-[15px] mobile:py-[25px] no-underline w-full text-[16px] font-bold capitalize px-[26px] py-[30px] block relative leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#00c39a]">
+                  <a href="./resgister.html" class="tooglemenu:py-[15px] font-outfit bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#000] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:.3s] align-middle whitespace-nowrap relative">
+                    SIGN UP 
+                  </a>
+                </li>
+                <li class=" desktop:px-[15px] mobile:py-[25px] no-underline text-[16px] font-bold capitalize px-[26px] block  leading-none tracking-wider text-[white] [transition:color_0.3s_ease] font-outfit hover:text-[#000] ml-0 header-lang relative">
+                  <div class="dropdown relative">
+                      <button class="border-[none] bg-transparent p-0 font-normal text-[14px] uppercase flex items-center gap-[5px] text-white">
+                          <img src="./image/lang-en.jpg" alt="en" class="rounded-[10px]">
+                          EN
+                          <i class="fa-solid fa-angle-down"></i>
+                      </button>
+                      <div class="dropdown-menu hidden absolute left-0-0 w-40 bg-white border border-gray-200 p-2 mt-[0px] rounded-[5px]">
+                          <button class="border-[none] bg-transparent p-0 font-normal text-[14px] uppercase flex items-center gap-[5px] text-[#000]">
+                              <img src="./image/russia.jpg" alt="vi" class="rounded-[10px]">
+                              VN
+                          </button>
+                      </div>
+                  </div>
+              </li>
+                
+              </ul>
+            </div>
+            <div class="mobile:hidden header-action">
+              <ul class="flex items-center">
+                <li class="ml-0 header-lang relative">
+                  <div class="dropdown relative">
+                      <button class="border-[none] bg-transparent p-0 font-normal text-[14px] uppercase flex items-center gap-[5px] text-white">
+                          <img src="./image/lang-en.jpg" alt="en" class="rounded-[10px]">
+                          EN
+                          <i class="fa-solid fa-angle-down"></i>
+                      </button>
+                      <div class="dropdown-menu hidden absolute right-0 w-40 bg-white border border-gray-200 p-2 mt-[0px] rounded-[5px]">
+                          <button class="border-[none] bg-transparent p-0 font-normal text-[14px] uppercase flex items-center gap-[5px]">
+                              <img src="./image/russia.jpg" alt="vi" class="rounded-[10px]">
+                              VN
+                          </button>
+                      </div>
+                  </div>
+              </li>
+                <li class="ml-[40px] relative">
+                  <a href="./resgister.html" class="tooglemenu:py-[15px] font-outfit bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#000] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:.3s] align-middle whitespace-nowrap relative">
+                    SIGN UP 
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
       <main class="relative z-[1] bg-[#160042]">
         <div class="bg-[url(/image/noise_bg.png)] bg-cover bg-[50%] w-full h-full left-[0] top-[0] z-[-1] absolute mix-blend-soft-light opacity-[.7]"></div>
         <div class="bg-[url(/image/main_shape.png)] bg-cover bg-[50%] w-full h-full left-[0] top-[0] z-[-1] fixed"></div>

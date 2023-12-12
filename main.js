@@ -146,7 +146,7 @@ var swiper = new Swiper('.testimonialss', {
 })
 
 // menu
-var menuMobile = document.getElementById("menu-main");
+var menuMobile = document.getElementById("menu-mobile");
 var toggleMobile = document.querySelector(".toogle-mobile");
 var markMobile = document.querySelector(".icon-mark");
 
