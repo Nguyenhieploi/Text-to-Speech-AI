@@ -30,3 +30,34 @@ function closeMenuOnClickOutside(event) {
 toggleMobile.addEventListener("click", showMenu);
 markMobile.addEventListener("click", hideMenu);
 markMobile.style.display = "none";
+
+// Xử lý
+async function login(){
+  try{
+    var data = {
+      email: null,
+      password:null,
+      role:[
+        "user"
+      ]
+    }
+    var getEmail = document.getElementById("email").value;
+    var getPassword = document.getElementById("password").value;
+    
+    if(!email || !password){
+      alert("Vui lòng nhập đầy đủ");
+      return;
+    }
+
+    data.email = getEmail;
+    data.password = getPassword;
+    event.preventDefault()
+    var getCheckLogin = await checkLogin(data);
+    
+    
+  
+   
+  }catch(error){
+    console.log(error);
+  }
+}

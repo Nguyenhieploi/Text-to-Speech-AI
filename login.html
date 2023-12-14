@@ -112,11 +112,11 @@
                         <form action="">
                             <div class="mb-[25px]">
                                 <label for="" class="font-bold text-[16px] tracking-[.02em] block text-[#fff] mb-[10px] font-PlusJakarta"> Email</label>
-                                <input type="email" class="w-full border-[1px]  border-[hsla(0,0%,100%,.13)] rounded-[5px] bg-transparent text-[16px] font-normal text-[#c8b8e8] px-[20px] py-[15px] h-[60px] outline-none" >
+                                <input id="email" type="email" class="w-full border-[1px]  border-[hsla(0,0%,100%,.13)] rounded-[5px] bg-transparent text-[16px] font-normal text-[#c8b8e8] px-[20px] py-[15px] h-[60px] outline-none" >
                             </div>
                             <div class="mb-[25px]">
                                 <label for="" class="font-bold text-[16px] tracking-[.02em] block text-[#fff] mb-[10px] font-PlusJakarta">Password</label>
-                                <input type="password" class="w-full border-[1px]  border-[hsla(0,0%,100%,.13)] rounded-[5px] bg-transparent text-[16px] font-normal text-[#c8b8e8] px-[20px] py-[15px] h-[60px] outline-none" >
+                                <input id="password" type="password" class="w-full border-[1px]  border-[hsla(0,0%,100%,.13)] rounded-[5px] bg-transparent text-[16px] font-normal text-[#c8b8e8] px-[20px] py-[15px] h-[60px] outline-none" >
                             </div>
                             <div class="flex justify-between mb-[25px]">
                                 <div class="flex items-center">
@@ -125,7 +125,7 @@
                                 </div>
                                 <a href="#" class="font-PlusJakarta text-[16px] text-[#fff]">Quên mật khẩu</a>
                             </div>
-                            <button type="submit" class="font-PlusJakarta font-bold text-[14px] w-full border-[none] rounded-[5px] tracking-[.1em] uppercase px-[20px] py-[18px] text-[#fff] bg-[#6721ff] h-[60px] mb-[30px]">
+                            <button  onclick="login()" class="font-PlusJakarta font-bold text-[14px] w-full border-[none] rounded-[5px] tracking-[.1em] uppercase px-[20px] py-[18px] text-[#fff] bg-[#6721ff] h-[60px] mb-[30px]">
                                 ĐĂNG NHẬP
                             </button>
                             <a href="./resgister.html">
@@ -150,7 +150,8 @@
             </div>
         </section >
       </main>
-
+     
       <script src="./login.js"></script>
+      <script src="./API.js"></script>
 </body>
 </html>
