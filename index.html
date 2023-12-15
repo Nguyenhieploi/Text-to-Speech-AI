@@ -7,6 +7,7 @@
     <title>Text to speech AI</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./font/font-awesome6pro/css/all.css">
+    <link rel="stylesheet" href="./cute-alert/style.css">
   </head>
   <body>
     <div id="__next">
@@ -95,9 +96,9 @@
                       ĐĂNG KÝ
                       </a>
                     </li>
-                    <li class="text-[#fff] ml-[10px] hidden " id="HelloUser">
+                    <li class="text-[#fff] ml-[10px] hidden gap-[10px] " id="HelloUser">
                         <p >Xin chào <span id="nameUser"></span></p>
-                       <p id="btn-logout" class="cursor-pointer">
+                       <p id="btn-logout" class="cursor-pointer hover:text-red-500 [transition:all_.3s]">
                          <i class="fa-regular fa-power-off"></i>
                         </p>
                     </li>
@@ -135,36 +136,46 @@
                   <form action="">
                     <div class="engine-form flex gap-[20px] mobil576px:flex-wrap mobil576px:gap-[0px]">
                       <div class="lang-ordering mb-[20px] w-full">
-                        <select name="" id="select_lang" class="w-full bg-[#222325] font-outfit outline-none text-[#f0f0f0] border-[1px] border-[solid] border-[#393a3d] rounded-[5px] text-[16px] px-[20px] py-[10px]">
+                        <select name="" id="select_accent" class="w-full bg-[#222325] font-Roboto outline-none text-[#f0f0f0] border-[1px] border-[solid] border-[#393a3d] rounded-[5px] text-[16px] px-[20px] py-[10px]">
                           <option value="0">Thanh Minh (Nam)</option>
                           <option value="1">Hoài My (Nữ)</option>
                         </select>
                       </div>
                       <div class="voice-ordering mb-[20px] w-full">
-                        <select name="" id="select_voice"  class="w-full bg-[#222325] font-outfit outline-none text-[#f0f0f0] border-[1px] border-[solid] border-[#393a3d] rounded-[5px] text-[16px] px-[20px] py-[10px]">
-                          <option value="0">Amber (HD)</option>
-                          <option value="0">Brandon (HD)</option>
-                          <option value="0">Tony (HD)</option>
-                          <option value="0">Michael (HD)</option>
-                          <option value="0">Sara (HD)</option>
-                          <option value="0">Prabhat (HD)</option>
+                        <select name="" id="select_voice"  class="w-full bg-[#222325] font-Roboto outline-none text-[#f0f0f0] border-[1px] border-[solid] border-[#393a3d] rounded-[5px] text-[16px] px-[20px] py-[10px]">
+                          <option value="0">Tốc độ 0.5x</option>
+                          <option value="1" selected>Tốc độ 1x </option>
+                          <option value="2">Tốc độ 1.5x</option>
+                          <option value="3">Tốc độ 2x</option>
+                          <option value="4">Tốc độ 2.5x</option>
+                          <option value="5">Tốc độ 3x</option>
                         </select>
                       </div>
                     </div>
+                    <div class="flex font-Roboto mb-[10px] text-[#fff] text-center justify-center border-[1px]  border-[#446052] p-[10px]">
+                      <span>Bạn đang có <span id="credit"></span> kí tự chuyển đổi</span>
+                    </div>
                     <div class="form-grp border-[1px] border-[solid] border-[#393a3d] rounded-[5px] pt-[10px] px-[10px] pb-[20px] mb-[20px]">
-                      <textarea placeholder="Nhập văn bản" class="w-full text-white font-outfit outline-none border-[none] block bg-[rgba(57,58,61,.3)] rounded-[5px] px-[20px] py-[10px] min-h-[160px] max-h-[160px] mb-[15px]"></textarea>
+                      <textarea oninput="countLength()" id="textContent" placeholder="Nhập văn bản" class="w-full text-white font-Rethink outline-none border-[none] block bg-[rgba(57,58,61,.3)] rounded-[5px] px-[20px] py-[10px] min-h-[160px] max-h-[160px] mb-[15px]"></textarea>
                       <div class="flex items-start justify-between text-[13px] leading-[1.2] text-[#ababab]">
-                        <span class="leading-[20px]">Việc sử dụng miễn phí Voicer Studio bị giới hạn ở 50 ký tự.<br>
-                          Để sử dụng nhiều hơn và có giọng nói cao cấp hơn, bạn có thể mua gói.</span>
-                          <span>0 kí tự</span>
+                        <span class="leading-[20px]">Việc sử dụng miễn phí Voicer Studio bị giới hạn ở 1000 ký tự.<br>
+                          Để sử dụng nhiều hơn và có giọng nói cao cấp hơn, bạn có thể mua gói.<br>
+                          
+                        </span>
+                          <div>
+                            <span id="lengthContent"></span> 
+                            kí tự
+                          </div>
                       </div>
                     </div>
-                    <button class="hover:bg-[#fdcf6d] [transition:all_.5s] speech-btn font-PlusJakarta font-bold text-[14px] tracking-[.05em] uppercase text-[#151515] border-[none] w-full px-[20px] py-[13px] rounded-[5px] bg-[#00c39a] flex items-center justify-center h-[50px]">
+                    <button class="hover:bg-[#fdcf6d] [transition:all_.5s] speech-btn font-Roboto font-bold text-[14px] tracking-[.05em] uppercase text-[#151515] border-[none] w-full px-[20px] py-[13px] rounded-[5px] bg-[#00c39a] flex items-center justify-center h-[50px]">
                       <span class="w-[5px] h-[9px] inline-block bg-[#151515] mr-[3px]"></span>
                       <span class="w-[5px] h-[15px] inline-block bg-[#151515] mr-[3px]"></span>
                       <span class="w-[5px] h-[9px] inline-block bg-[#151515] mr-[10px]"></span>
                       Chuyển văn bản thành giọng nói
                     </button>
+
+                    
                   </form>
                 </div>
                 <div class="hidden speech-item w-full bg-[#222325] rounded-[20px] px-[20px] py-[30px] mb-[30px]">
@@ -1075,7 +1086,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/main.js"></script>
     <script src="./API.js"></script>
-
+    <script src="./cute-alert/cute-alert.js"></script>
 
   </body>
 </html>

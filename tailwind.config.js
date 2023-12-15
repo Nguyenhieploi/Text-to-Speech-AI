@@ -10,7 +10,9 @@ export default {
       fontFamily:{
         outfit:["Outfit",'san-serif'],
         playfair:["Playfair Display",'serif'],
-        PlusJakarta:["Plus Jakarta Sans",'sans-serif']
+        PlusJakarta:["Plus Jakarta Sans",'sans-serif'],
+        Roboto:["roboto",'sans-serif'],
+        Rethink:["Rethink Sans",'sans-serif']
       },
       screens: {
         'desktop': {'max': '1200px'},

@@ -34,6 +34,8 @@ markMobile.style.display = "none";
 // Login
 async function login() {
   try {
+    event.preventDefault();
+
       var data = {
           email: null,
           password: null,
@@ -44,28 +46,40 @@ async function login() {
       var getPassword = document.getElementById("password").value;
 
       if (!getEmail || !getPassword) {
-          alert("Vui lòng nhập đầy đủ thông tin");
+        cuteToast({
+          type:"warning",
+          message:"Vui lòng nhập đầy đủ thông tin",
+          timer:5000,
+        });
           return;
       }
 
       data.email = getEmail;
       data.password = getPassword;
 
-      event.preventDefault();
-
+     
       var getCheckLogin = await loginUser(data); // trả về 1 chuỗi JSON
       var parsedData = JSON.parse(getCheckLogin); // chuyển sang đối tượng
 
       // Do trường hợp nhập sai thông tin thì có trả về statusCode
       if(parsedData.statusCode >= 400){
-        console.log("Thất bại sai thông tin");
+        cuteToast({
+          type:"error",
+          message:"Đăng nhập thất bại",
+          timer:5000,
+        });
         return;
       }
-      
+
+     
       var dataUser = parsedData;
       var keyLocal = "tokenUser";
       localStorage.setItem(keyLocal, JSON.stringify(dataUser));
-
+      cuteToast({
+        type:"success",
+        message:"Đăng nhập thành công",
+        timer:5000,
+      });
       // Gọi hàm loading sau khi đăng nhập hoàn tất
       await loading();
   } catch (error) {
@@ -79,7 +93,9 @@ async function loading() {
       document.getElementById("loader").style.display = "block";
 
       // Chờ một khoảng thời gian trước khi chuyển hướng 
+     
       await new Promise(resolve => setTimeout(resolve, 500));
+    
       // Chuyển hướng sau khi xoay xong
       window.location.href = "index.html";
   } catch (error) {

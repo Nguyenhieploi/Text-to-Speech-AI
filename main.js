@@ -186,6 +186,7 @@ function hiddenBtn(){
         var keyLocal = "tokenUser";
         var tokenUser = localStorage.getItem(keyLocal);
         if(tokenUser){
+         
             document.getElementById("btn-signup").style.display = "none";
             document.getElementById("btn-login").style.display = "none";
             infoUser(tokenUser)
@@ -219,10 +220,13 @@ function checkLogin(){
 // Lấy thông tin user từ localstorage
 function infoUser(tokenUser){
     try{
+       
         var getData = JSON.parse(tokenUser);
         var getName = getData.user.fullname;
-        document.getElementById("HelloUser").style.display = "block"
+        var getCredit = getData.user.credit;
+        document.getElementById("HelloUser").style.display = "flex"
         document.getElementById("nameUser").innerHTML = getName
+        document.getElementById("credit").innerHTML = getCredit
     }catch(error){
         console.log(error);
     }
@@ -235,9 +239,34 @@ document.getElementById("btn-logout").addEventListener("click", function() {
         // Xóa token khỏi localStorage hoặc thực hiện các bước đăng xuất cần thiết
         var keyLocal = "tokenUser";
         localStorage.removeItem(keyLocal);
-
+        
         window.location.href = "index.html";
     } catch (error) {
         console.log(error);
     }
 });
+
+// Đếm số lượng từ đã nhập
+function countLength() {
+    try {
+      var textContent = document.getElementById("textContent"); // Textarea
+      var lengthContent = document.getElementById("lengthContent"); // Số từ
+        
+      var textLength = textContent.value.length;  // Lấy độ đài từ textarea
+      lengthContent.innerHTML = textLength; // gán 
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+// Lấy từ đã nhập vào 
+//   function getValue() {
+//     try {
+//       var textContent = document.getElementById("textContent");
+//       var inputValue = textContent.value;
+//       console.log(inputValue);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   }
+
