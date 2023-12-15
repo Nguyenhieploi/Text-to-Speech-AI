@@ -1,5 +1,5 @@
 // Login
-async function checkLogin(data){
+async function loginUser(data){
     try{
         var myHeaders = new Headers();
         myHeaders.append("accept-language", "vi");
@@ -13,7 +13,7 @@ async function checkLogin(data){
             redirect: 'follow'
         })
       
-        return {...await response.text(), status: response.status}
+        return response.text();
 
     }catch(error){
         console.log(error);

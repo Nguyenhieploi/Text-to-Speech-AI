@@ -178,5 +178,66 @@ toggleMobile.addEventListener("click", showMenu);
 markMobile.addEventListener("click", hideMenu);
 markMobile.style.display = "none";
 
+// ===================================================================================================================
+
+// Kiểm tra đã đăng nhập hay chưa khi web load 
+function hiddenBtn(){
+    try{
+        var keyLocal = "tokenUser";
+        var tokenUser = localStorage.getItem(keyLocal);
+        if(tokenUser){
+            document.getElementById("btn-signup").style.display = "none";
+            document.getElementById("btn-login").style.display = "none";
+            infoUser(tokenUser)
+        }
+        else{
+            console.log("khong tồn tại");
+        }
+       
+    }catch(error){
+        console.log(error);
+    }
+}
+hiddenBtn()
+
+// Kiểm tra khi click button Đăng nhập 
+function checkLogin(){
+    try{
+        var keyLocal = "tokenUser";
+        var tokenUser = localStorage.getItem(keyLocal);
+        if(tokenUser){
+            window.location.href = "index.html";
+        }
+        else{
+            window.location.href = "login.html";
+        }
+    }catch(error){
+        console.log(error);
+    }
+}
+
+// Lấy thông tin user từ localstorage
+function infoUser(tokenUser){
+    try{
+        var getData = JSON.parse(tokenUser);
+        var getName = getData.user.fullname;
+        document.getElementById("HelloUser").style.display = "block"
+        document.getElementById("nameUser").innerHTML = getName
+    }catch(error){
+        console.log(error);
+    }
+}
 
 
+// Logout
+document.getElementById("btn-logout").addEventListener("click", function() {
+    try {
+        // Xóa token khỏi localStorage hoặc thực hiện các bước đăng xuất cần thiết
+        var keyLocal = "tokenUser";
+        localStorage.removeItem(keyLocal);
+
+        window.location.href = "index.html";
+    } catch (error) {
+        console.log(error);
+    }
+});

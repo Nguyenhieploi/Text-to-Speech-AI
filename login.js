@@ -31,33 +31,90 @@ toggleMobile.addEventListener("click", showMenu);
 markMobile.addEventListener("click", hideMenu);
 markMobile.style.display = "none";
 
-// Xử lý
-async function login(){
-  try{
-    var data = {
-      email: null,
-      password:null,
-      role:[
-        "user"
-      ]
-    }
-    var getEmail = document.getElementById("email").value;
-    var getPassword = document.getElementById("password").value;
-    
-    if(!email || !password){
-      alert("Vui lòng nhập đầy đủ");
-      return;
-    }
+// Login
+async function login() {
+  try {
+      var data = {
+          email: null,
+          password: null,
+          role: ["user"]
+      };
 
-    data.email = getEmail;
-    data.password = getPassword;
-    event.preventDefault()
-    var getCheckLogin = await checkLogin(data);
-    
-    
-  
-   
-  }catch(error){
-    console.log(error);
+      var getEmail = document.getElementById("email").value;
+      var getPassword = document.getElementById("password").value;
+
+      if (!getEmail || !getPassword) {
+          alert("Vui lòng nhập đầy đủ thông tin");
+          return;
+      }
+
+      data.email = getEmail;
+      data.password = getPassword;
+
+      event.preventDefault();
+
+      var getCheckLogin = await loginUser(data); // trả về 1 chuỗi JSON
+      var parsedData = JSON.parse(getCheckLogin); // chuyển sang đối tượng
+
+      // Do trường hợp nhập sai thông tin thì có trả về statusCode
+      if(parsedData.statusCode >= 400){
+        console.log("Thất bại sai thông tin");
+        return;
+      }
+      
+      var dataUser = parsedData;
+      var keyLocal = "tokenUser";
+      localStorage.setItem(keyLocal, JSON.stringify(dataUser));
+
+      // Gọi hàm loading sau khi đăng nhập hoàn tất
+      await loading();
+  } catch (error) {
+      console.log(error);
   }
 }
+
+async function loading() {
+  try {
+      document.getElementById("loginText").style.display = "none";
+      document.getElementById("loader").style.display = "block";
+
+      // Chờ một khoảng thời gian trước khi chuyển hướng 
+      await new Promise(resolve => setTimeout(resolve, 500));
+      // Chuyển hướng sau khi xoay xong
+      window.location.href = "index.html";
+  } catch (error) {
+      console.log(error);
+  }
+}
+
+// Kiểm tra localstorage có tồn tại key chưa => Trường hợp người dùng truy cập qua URL
+async function checkKeyLocal() {
+  try {
+      var keyLocal = "tokenUser";
+      var tokenUser = localStorage.getItem(keyLocal);
+
+      if (tokenUser) {
+          // Kiểm tra trạng thái đăng nhập ở phía server
+          var isValidToken = await checkTokenValidity(tokenUser);
+
+          if (isValidToken) {
+              // Key tồn tại và token hợp lệ, chuyển hướng sang index.html
+              window.location.href = "index.html";
+          }
+      }
+
+  } catch (error) {
+      console.log(error);
+  }
+}
+
+// Thực hiện kiểm tra token ở phía server
+async function checkTokenValidity(token) {
+  // Gửi yêu cầu kiểm tra token đến máy chủ
+  // Trả về true nếu token hợp lệ, ngược lại trả về false
+  return true; 
+}
+
+// Gọi hàm checkKeyLocal để kiểm tra trạng thái đăng nhập
+checkKeyLocal();
+

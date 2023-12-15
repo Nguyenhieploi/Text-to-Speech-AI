@@ -259,3 +259,27 @@
 }
 
 
+/* Loading */
+#loader {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid #ffffff;
+    border-top: 4px solid #00c39a ;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Thêm hiệu ứng ẩn chữ khi xoay */
+.button-loading #loginText {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}

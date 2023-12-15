@@ -19,7 +19,7 @@
             </div>
             
             <div class="menu-wrap">
-              <nav class="tooglemenu:justify-between flex items-center flex-wrap justify-start pt-[10px]">
+              <nav class="tooglemenu:justify-between flex items-center flex-wrap justify-between pt-[10px] pb-[10px]">
                 <div class="logo">
                   <a href="/"><img src="./image/logo.png" alt="Logo"></a>
                 </div>
@@ -64,13 +64,13 @@
                               </button>
                           </div>
                       </div>
-                  </li>
+                    </li>
                     
                   </ul>
                 </div>
                 <div class="mobile:hidden header-action">
                   <ul class="flex items-center">
-                    <li class="ml-0 header-lang relative">
+                    <li class="hidden ml-0 header-lang relative">
                       <div class="dropdown relative">
                           <button class="border-[none] bg-transparent p-0 font-normal text-[14px] uppercase flex items-center gap-[5px] text-white">
                               <img src="./image/lang-en.jpg" alt="en" class="rounded-[10px]">
@@ -85,10 +85,21 @@
                           </div>
                       </div>
                   </li>
-                    <li class="ml-[40px] relative">
+                  <li class="ml-[40px] relative" id="btn-login">
+                    <a href="#" onclick="checkLogin()" class="tooglemenu:py-[15px] font-outfit bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#000] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:.3s] align-middle whitespace-nowrap relative">
+                    ĐĂNG NHẬP
+                    </a>
+                  </li>
+                    <li class="ml-[40px] relative" id="btn-signup">
                       <a href="./resgister.html" class="tooglemenu:py-[15px] font-outfit bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#000] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:.3s] align-middle whitespace-nowrap relative">
                       ĐĂNG KÝ
                       </a>
+                    </li>
+                    <li class="text-[#fff] ml-[10px] hidden " id="HelloUser">
+                        <p >Xin chào <span id="nameUser"></span></p>
+                       <p id="btn-logout" class="cursor-pointer">
+                         <i class="fa-regular fa-power-off"></i>
+                        </p>
                     </li>
                   </ul>
                 </div>
@@ -125,8 +136,8 @@
                     <div class="engine-form flex gap-[20px] mobil576px:flex-wrap mobil576px:gap-[0px]">
                       <div class="lang-ordering mb-[20px] w-full">
                         <select name="" id="select_lang" class="w-full bg-[#222325] font-outfit outline-none text-[#f0f0f0] border-[1px] border-[solid] border-[#393a3d] rounded-[5px] text-[16px] px-[20px] py-[10px]">
-                          <option value="0">English (Canada)</option>
-                          <option value="1">Viet Nam (VN)</option>
+                          <option value="0">Thanh Minh (Nam)</option>
+                          <option value="1">Hoài My (Nữ)</option>
                         </select>
                       </div>
                       <div class="voice-ordering mb-[20px] w-full">
@@ -1063,7 +1074,7 @@
    
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/main.js"></script>
-
+    <script src="./API.js"></script>
 
 
   </body>
