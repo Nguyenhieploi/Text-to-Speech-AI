@@ -283,3 +283,33 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
+
+.audioDownload{
+    display: flex; 
+padding-top: 0.5rem;
+padding-bottom: 0.5rem; 
+padding-left: 1rem;
+padding-right: 1rem; 
+justify-content: space-between; 
+align-items: center; 
+border-radius: 0.5rem; 
+border-width: 1px; 
+border-color: #E5E7EB; 
+transition-property: all;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 300ms; 
+transition-duration: 300ms; 
+margin-top: 10px;
+width: 200px;
+color: #fff;
+
+}
+
+
+
+
+.audioDownload:hover {
+ color: #00C39A;
+border-color: #00C39A;
+ 
+}

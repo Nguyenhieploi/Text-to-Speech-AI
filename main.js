@@ -179,14 +179,28 @@ markMobile.addEventListener("click", hideMenu);
 markMobile.style.display = "none";
 
 // ===================================================================================================================
-
+document.addEventListener("DOMContentLoaded", function () {
+    // Lấy phần tử có id là "fileAudio"
+    var fileAudio = document.getElementById("fileAudio");
+    var listenAudio = document.getElementById("listenAudio");
+    var player = document.getElementById("player")
+    if (fileAudio && listenAudio) {
+        fileAudio.style.display = "none";    //////////TẠM THỜI
+        listenAudio.style.display = "none";
+       
+    }
+    if (player) {
+        // Thiết lập controlsList bằng "nodownload"
+        player.controlsList = "nodownload";
+    }
+    
+});
 // Kiểm tra đã đăng nhập hay chưa khi web load 
 function hiddenBtn(){
     try{
         var keyLocal = "tokenUser";
         var tokenUser = localStorage.getItem(keyLocal);
         if(tokenUser){
-         
             document.getElementById("btn-signup").style.display = "none";
             document.getElementById("btn-login").style.display = "none";
             infoUser(tokenUser)
@@ -254,19 +268,139 @@ function countLength() {
         
       var textLength = textContent.value.length;  // Lấy độ đài từ textarea
       lengthContent.innerHTML = textLength; // gán 
+      return textLength;
     } catch (error) {
       console.log(error);
     }
   }
 
-// Lấy từ đã nhập vào 
-//   function getValue() {
-//     try {
-//       var textContent = document.getElementById("textContent");
-//       var inputValue = textContent.value;
-//       console.log(inputValue);
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   }
 
+async function checkTextToSpeech() {
+    try {
+        event.preventDefault();
+
+        var keyLocal = "tokenUser";
+        var tokenUser = localStorage.getItem(keyLocal);
+       
+        if (tokenUser) {
+            var textContent = document.getElementById("textContent").value;
+            var getData = JSON.parse(tokenUser);
+            var getToken = getData.token.accessToken // lấy token
+            var getCredit = getData.user.credit; // lấy credit
+           
+            if (textContent.trim() === "") {
+                cuteToast({
+                    type: "warning",
+                    message: "Vui lòng điền đầy đủ thông tin",
+                    timer: 5000,
+                });
+            } else {
+                var data = {
+                    text: null,
+                    gender:null,
+                    speed:null
+                }
+                 var textContent = document.getElementById("textContent").value;
+                 var gender = document.getElementById("select_accent").value;
+                 var speedVoice= document.getElementById("select_voice").value;
+                
+                 data.text = textContent;
+                 data.gender = gender;
+                 data.speed = speedVoice;
+               
+                 // Kiểm tra số kí tự nhập vào lớn hớn 1000 và lớn hơn credit kí tự đang có 
+                 var lengthText = countLength();
+                 
+                 if(lengthText > 1000 && lengthText > getCredit ){
+                    cuteToast({
+                        type:"error",
+                        message:"Vui lòng nạp tiền",
+                        timer:10000,
+                      });
+                      return;
+                 }
+                 cuteToast({
+                    type:"info",
+                    message:"Vui lòng đợi trong giây lát",
+                    timer:10000,
+                  });
+              
+              
+                await loading()
+                 var callTextToSpeed = await textToSpeech(data,getToken);
+                downloadFile(callTextToSpeed); // truyền giá trị trả về 
+                liveVoice(callTextToSpeed)
+                 cuteToast({
+                    type:"success",
+                    message:"Tạo thành công",
+                    timer:5000,
+                  });
+                document.getElementById("fileAudio").style.display = "block"
+                document.getElementById("listenAudio").style.display = "block"
+                document.getElementById("textToSpeech").style.display = "flex";
+                document.getElementById("loader").style.display = "none";
+              
+            }
+        } else {
+            cuteToast({
+                type: "warning",
+                message: "Vui lòng đăng nhập để sử dụng",
+                timer: 5000,
+            });
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+async function loading() {
+    try {
+        document.getElementById("textToSpeech").style.display = "none";
+        document.getElementById("loader").style.display = "block";
+  
+        // Chờ một khoảng thời gian
+        await new Promise(resolve => setTimeout(resolve, 500));
+    } catch (error) {
+        console.log(error);
+    }
+  }
+
+function downloadFile(data) {
+    try {
+        var fileAudio = document.getElementById("fileAudio");
+        var jsonData = JSON.parse(data);
+        var listIdsString = jsonData.join(','); // Chuyển mảng thành chuỗi, ngăn cách bởi dấu phẩy
+        
+        fileAudio.innerHTML =
+        `
+        <a href="https://audio-api.tailieure.net/audio/download?list_ids=${listIdsString}" target="_blank" rel="noopener noreferrer" 
+        class="audioDownload flex items-center mt-[10px] justify-between border border-gray-200 w-[200px] py-2 px-4 rounded-lg text-[#fff]
+         hover:text-[#00C39A] hover:border-[#00C39A] duration-300 transition-all">
+        <div class="flex gap-[5px] items-center">
+          <i class="fa-light fa-file-audio"></i>
+          <span>File đầy đủ</span>
+        </div> 
+        <span>
+          <i class="fa-thin fa-arrow-down-to-line"></i>
+        </span>
+      </a>
+        `;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+function liveVoice(data){
+    try{
+        var liveStudio = document.getElementById("listenAudio");
+        var jsonData = JSON.parse(data);
+        var listIdsString = jsonData.join(',');
+        liveStudio.innerHTML = 
+        `
+        <audio id="player" controls> 
+        <source src="https://audio-api.tailieure.net/audio/download?list_ids=${listIdsString}" type="audio/mp3">
+      </audio>
+        `
+    }catch(error){
+        console.log(error);
+    }
+}

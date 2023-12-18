@@ -137,18 +137,18 @@
                     <div class="engine-form flex gap-[20px] mobil576px:flex-wrap mobil576px:gap-[0px]">
                       <div class="lang-ordering mb-[20px] w-full">
                         <select name="" id="select_accent" class="w-full bg-[#222325] font-Roboto outline-none text-[#f0f0f0] border-[1px] border-[solid] border-[#393a3d] rounded-[5px] text-[16px] px-[20px] py-[10px]">
-                          <option value="0">Thanh Minh (Nam)</option>
-                          <option value="1">Hoài My (Nữ)</option>
+                          <option value="male">Thanh Minh (Nam)</option>
+                          <option value="female">Hoài My (Nữ)</option>
                         </select>
                       </div>
                       <div class="voice-ordering mb-[20px] w-full">
                         <select name="" id="select_voice"  class="w-full bg-[#222325] font-Roboto outline-none text-[#f0f0f0] border-[1px] border-[solid] border-[#393a3d] rounded-[5px] text-[16px] px-[20px] py-[10px]">
-                          <option value="0">Tốc độ 0.5x</option>
+                          <option value="0.5">Tốc độ 0.5x</option>
                           <option value="1" selected>Tốc độ 1x </option>
-                          <option value="2">Tốc độ 1.5x</option>
-                          <option value="3">Tốc độ 2x</option>
-                          <option value="4">Tốc độ 2.5x</option>
-                          <option value="5">Tốc độ 3x</option>
+                          <option value="1.5">Tốc độ 1.5x</option>
+                          <option value="2">Tốc độ 2x</option>
+                          <option value="2.5">Tốc độ 2.5x</option>
+                          <option value="3">Tốc độ 3x</option>
                         </select>
                       </div>
                     </div>
@@ -168,14 +168,24 @@
                           </div>
                       </div>
                     </div>
-                    <button class="hover:bg-[#fdcf6d] [transition:all_.5s] speech-btn font-Roboto font-bold text-[14px] tracking-[.05em] uppercase text-[#151515] border-[none] w-full px-[20px] py-[13px] rounded-[5px] bg-[#00c39a] flex items-center justify-center h-[50px]">
+                   <div class="relative">
+                    <button onclick="checkTextToSpeech()" id="textToSpeech"  class="hover:bg-[#fdcf6d] [transition:all_.5s] speech-btn font-Roboto font-bold text-[14px] tracking-[.05em] uppercase text-[#151515] border-[none] w-full px-[20px] py-[13px] rounded-[5px] bg-[#00c39a] flex items-center justify-center h-[50px]">
                       <span class="w-[5px] h-[9px] inline-block bg-[#151515] mr-[3px]"></span>
                       <span class="w-[5px] h-[15px] inline-block bg-[#151515] mr-[3px]"></span>
                       <span class="w-[5px] h-[9px] inline-block bg-[#151515] mr-[10px]"></span>
-                      Chuyển văn bản thành giọng nói
+                     <span > Chuyển văn bản thành giọng nói</span>
                     </button>
-
+                    <div id="loader" class="hidden"></div>
+                   </div>
                     
+                   <div class="flex gap-[20px] mt-[20px] items-center">
+                    <div id="listenAudio">
+                     
+                    </div>
+                    <div id="fileAudio">
+                    </div>
+                   </div>
+                  
                   </form>
                 </div>
                 <div class="hidden speech-item w-full bg-[#222325] rounded-[20px] px-[20px] py-[30px] mb-[30px]">
@@ -1087,6 +1097,6 @@
     <script src="/main.js"></script>
     <script src="./API.js"></script>
     <script src="./cute-alert/cute-alert.js"></script>
-
+    
   </body>
 </html>
