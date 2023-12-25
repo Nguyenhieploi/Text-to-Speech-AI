@@ -373,8 +373,7 @@ function downloadFile(data) {
         fileAudio.innerHTML =
         `
         <a href="https://audio-api.tailieure.net/audio/download?list_ids=${listIdsString}" target="_blank" rel="noopener noreferrer" 
-        class="audioDownload flex items-center mt-[10px] justify-between border border-gray-200 w-[200px] py-2 px-4 rounded-lg text-[#fff]
-         hover:text-[#00C39A] hover:border-[#00C39A] duration-300 transition-all">
+        class="audioDownload">
         <div class="flex gap-[5px] items-center">
           <i class="fa-light fa-file-audio"></i>
           <span>File đầy đủ</span>
