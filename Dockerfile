@@ -1,12 +1,5 @@
-FROM node:18-alpine
-EXPOSE 5173
+FROM nginx:alpine
 
-RUN apk update && \
-    apk add --no-cache bash
 
-WORKDIR /home/app
-
-COPY . .
-
-RUN npm install
-CMD ["npm", "run", "dev"]
+COPY ./{folder} /usr/share/nginx/html/app
+COPY nginx.conf /etc/nginx/nginx.conf

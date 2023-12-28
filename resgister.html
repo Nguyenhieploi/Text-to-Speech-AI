@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGN UP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./font/font-awesome6pro/css/all.css">
 </head>
@@ -151,6 +152,28 @@
         </section >
       </main>
 
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                outfit: ["Outfit", 'san-serif'],
+                playfair: ["Playfair Display", 'serif'],
+                PlusJakarta: ["Plus Jakarta Sans", 'sans-serif'],
+                Roboto: ["roboto", 'sans-serif'],
+                Rethink: ["Rethink Sans", 'sans-serif']
+              },
+              screens: {
+                'desktop': { 'max': '1200px' },
+                'tablet': { 'min': '768px', 'max': '1024px' },
+                'tooglemenu': { 'max': '1024px' },
+                'mobile': { 'max': '768px' },
+                'mobil576px': { 'max': '576px' }
+              },
+            },
+          },
+        }
+      </script>
       <script src="./login.js"></script>
 </body>
 </html>
