@@ -71,10 +71,14 @@ async function login() {
         return;
       }
 
-     
       var dataUser = parsedData;
       var keyLocal = "tokenUser";
       localStorage.setItem(keyLocal, JSON.stringify(dataUser));
+
+      // Lấy token ra
+      var accessToken = dataUser.token.accessToken;
+      // Setcookie
+      document.cookie = "accessToken=" + accessToken + "; path=/;";
       cuteToast({
         type:"success",
         message:"Đăng nhập thành công",
@@ -108,7 +112,7 @@ async function checkKeyLocal() {
   try {
       var keyLocal = "tokenUser";
       var tokenUser = localStorage.getItem(keyLocal);
-
+      
       if (tokenUser) {
           // Kiểm tra trạng thái đăng nhập ở phía server
           var isValidToken = await checkTokenValidity(tokenUser);
