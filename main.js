@@ -213,7 +213,7 @@ function hiddenBtn(){
         console.log(error);
     }
 }
-hiddenBtn()
+
 
 // Kiểm tra khi click button Đăng nhập 
 function checkLogin(){
@@ -234,7 +234,6 @@ function checkLogin(){
 // Lấy thông tin user từ localstorage
 function infoUser(tokenUser){
     try{
-       
         var getData = JSON.parse(tokenUser);
         var getName = getData.user.fullname;
         var getCredit = getData.user.credit;
@@ -246,14 +245,13 @@ function infoUser(tokenUser){
     }
 }
 
-
 // Logout
 document.getElementById("btn-logout").addEventListener("click", function() {
     try {
         // Xóa token khỏi localStorage hoặc thực hiện các bước đăng xuất cần thiết
         var keyLocal = "tokenUser";
         localStorage.removeItem(keyLocal);
-        
+        deleteCookie("accessToken")
         window.location.href = "index.html";
     } catch (error) {
         console.log(error);
@@ -402,4 +400,23 @@ function liveVoice(data){
     }catch(error){
         console.log(error);
     }
+}
+ async function checkToken(){
+    try{
+        var statusCode = await userMe();
+        if(statusCode >= 400 ){
+            deleteCookie("accessToken")
+            var keyLocal = "tokenUser";
+            localStorage.removeItem(keyLocal);
+        }
+
+        hiddenBtn()
+    }catch(error){
+        console.log(error);
+    }
+ }
+checkToken()
+
+function deleteCookie(name){
+    document.cookie = name + "=; Max-Age=0"
 }

@@ -44,3 +44,40 @@ async function textToSpeech(data, getToken) {
 }
 
 
+async function userMe(){
+    try{
+        var tokenCookie = getCokkie("accessToken");
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        myHeaders.append("authorization", "Bearer " + tokenCookie);
+        
+        var response = await fetch("https://api.tailieure.net/v1/users/me", {
+            method: 'GET',
+            headers: myHeaders,
+        });
+
+        return response.status;
+    }catch(error){
+        console.log(error);
+    }
+}
+function getCokkie(name){
+    var cookie = document.cookie;
+    var listCookies = cookie.split(";")
+    
+    listCookies = listCookies.map(item=>item.trim()) // tạo mảng mới loại bỏ khoản trắng
+    var cookieString = listCookies.find(e => {
+        if(e.includes(name)){
+            return true; 
+        }
+    })
+   
+    if (cookieString) {
+        var getUser = cookieString.split("="); // chia chuỗi thành 1 mảng các chuỗi con
+        return getUser[1];
+    }
+    
+    return null;
+   
+}
