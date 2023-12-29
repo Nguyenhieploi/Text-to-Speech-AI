@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./font/font-awesome6pro/css/all.css">
-    <link rel="stylesheet" href="./cute-alert/style.css">
+    <link rel="stylesheet" href="./js/cute-alert/style.css">
   </head>
   <body>
     <div id="__next">
@@ -88,12 +88,12 @@
                       </div>
                   </li>
                   <li class="ml-[40px] relative" id="btn-login">
-                    <a href="#" onclick="checkLogin()" class="tooglemenu:py-[15px] font-outfit bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#000] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:.3s] align-middle whitespace-nowrap relative">
+                    <a href="#" onclick="checkLogin()" class="tooglemenu:py-[15px] font-Roboto bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#000] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:.3s] align-middle whitespace-nowrap relative">
                     ĐĂNG NHẬP
                     </a>
                   </li>
                     <li class="ml-[40px] relative" id="btn-signup">
-                      <a href="./resgister.html" class="tooglemenu:py-[15px] font-outfit bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#000] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:.3s] align-middle whitespace-nowrap relative">
+                      <a href="./resgister.html" class="tooglemenu:py-[15px] font-Roboto bg-[linear-gradient(89.69deg,#00c39a_36.5%,#fdcf6d_98.77%)] rounded-[5px] text-[#000] gradient-btn border-[none] cursor-pointer inline-block text-[14px] font-semibold tracking-[.05em] leading-none mb-0 px-[30px] py-[19px] text-center uppercase [transition:.3s] align-middle whitespace-nowrap relative">
                       ĐĂNG KÝ
                       </a>
                     </li>
@@ -133,7 +133,7 @@
           <section class="speech-area relative pt-[0] px-[0] pb-[100px] z-[1] ">
             <div class="mobile:max-w-[540px] tablet:max-w-[720px] desktop:max-w-[960px] max-w-[1320px] mr-auto ml-auto pl-[15px] pr-[15px]">
               <div class="mobile:grid mobile:grid-cols-[1fr] tablet:grid tablet:grid-cols-[1fr] flex justify-center gap-[30px]">
-                <div class="speech-item w-full bg-[#222325] rounded-[20px] px-[20px] py-[30px] mb-[30px]">
+                <div class="speech-item w-full bg-[#222325] rounded-[20px] px-[20px] py-[40px] mb-[40px]">
                   <form action="">
                     <div class="engine-form flex gap-[20px] mobil576px:flex-wrap mobil576px:gap-[0px]">
                       <div class="lang-ordering mb-[20px] w-full">
@@ -154,7 +154,7 @@
                       </div>
                     </div>
                     <div class="flex font-Roboto mb-[10px] text-[#fff] text-center justify-center border-[1px]  border-[#446052] p-[10px]">
-                      <span>Bạn đang có <span id="credit"></span> kí tự chuyển đổi</span>
+                      <span>Bạn có <span id="credit"></span> kí tự chuyển đổi miễn phí</span>
                     </div>
                     <div class="form-grp border-[1px] border-[solid] border-[#393a3d] rounded-[5px] pt-[10px] px-[10px] pb-[20px] mb-[20px]">
                       <textarea oninput="countLength()" id="textContent" placeholder="Nhập văn bản" class="w-full text-white font-Rethink outline-none border-[none] block bg-[rgba(57,58,61,.3)] rounded-[5px] px-[20px] py-[10px] min-h-[160px] max-h-[160px] mb-[15px]"></textarea>
@@ -1093,7 +1093,7 @@
       </a>
     </div>
   
-    <script src="./API.js"></script>
+    <script src="./js/API.js"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -1117,8 +1117,8 @@
       }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/main.js"></script>
-    <script src="./cute-alert/cute-alert.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/cute-alert/cute-alert.js"></script>
     
   </body>
 </html>

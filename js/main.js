@@ -99,7 +99,7 @@ var swiper = new Swiper('.mySwiper', {
             spaceBetweenSlides: 50
         },
         1700: {
-            slidesPerView: 7,
+            slidesPerView: 6,
             spaceBetweenSlides: 50
         }
     }
@@ -206,6 +206,7 @@ function hiddenBtn(){
             infoUser(tokenUser)
         }
         else{
+            document.getElementById("credit").innerHTML = 1000 
             console.log("khong tồn tại");
         }
        
@@ -238,12 +239,22 @@ function infoUser(tokenUser){
         var getName = getData.user.fullname;
         var getCredit = getData.user.credit;
         document.getElementById("HelloUser").style.display = "flex"
-        document.getElementById("nameUser").innerHTML = getName
-        document.getElementById("credit").innerHTML = getCredit
+        document.getElementById("nameUser").innerHTML = getName;
+        if(getCredit > 0){
+            document.getElementById("credit").innerHTML = getCredit
+            
+        }
+        else{
+            document.getElementById("credit").innerHTML = 1000 
+        
+        }
+        
+        
     }catch(error){
         console.log(error);
     }
 }
+
 
 // Logout
 document.getElementById("btn-logout").addEventListener("click", function() {
@@ -409,7 +420,6 @@ function liveVoice(data){
             var keyLocal = "tokenUser";
             localStorage.removeItem(keyLocal);
         }
-
         hiddenBtn()
     }catch(error){
         console.log(error);
@@ -420,3 +430,17 @@ checkToken()
 function deleteCookie(name){
     document.cookie = name + "=; Max-Age=0"
 }
+
+// function totalCredit(getCredit) {
+//     try {
+//         var characterLength = countLength();
+       
+        
+//         console.log(characterLength);
+//         console.log(getCredit);
+//     } catch(error) {
+//         console.log(error);
+//     }
+// }
+
+// totalCredit()
