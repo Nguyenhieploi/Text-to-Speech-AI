@@ -46,6 +46,10 @@ async function login() {
       var getPassword = document.getElementById("password").value;
 
       if (!getEmail || !getPassword) {
+        document.getElementById('email').style.border = "1px solid red"
+        document.getElementById('email').style.background = '#ff00001c'
+        document.getElementById('password').style.border = "1px solid red"
+        document.getElementById('password').style.background = '#ff00001c'
         cuteToast({
           type:"warning",
           message:"Vui lòng nhập đầy đủ thông tin",
@@ -60,7 +64,7 @@ async function login() {
      
       var getCheckLogin = await loginUser(data); // trả về 1 chuỗi JSON
       var parsedData = JSON.parse(getCheckLogin); // chuyển sang đối tượng
-
+      console.log(parsedData);
       // Do trường hợp nhập sai thông tin thì có trả về statusCode
       if(parsedData.statusCode >= 400){
         cuteToast({

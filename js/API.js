@@ -81,3 +81,22 @@ function getCokkie(name){
     return null;
    
 }
+
+async function register(raw){
+    try{
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var response = await  fetch("https://api.tailieure.net/v1/audio/register",   
+        {
+            method: 'POST',
+            headers: myHeaders,
+            body: JSON.stringify(raw),
+            redirect: 'follow'
+        })
+
+        return response.text();
+    }catch(error){
+        console.log(error);
+    }
+}
